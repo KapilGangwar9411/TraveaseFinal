@@ -1,14 +1,9 @@
 {
-  "version": 2,
-  "buildCommand": "chmod +x build.sh && ./build.sh",
-  "outputDirectory": "www",
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/assets/(.*)", "dest": "/assets/$1" },
-    { "src": "/(.*)", "dest": "/index.html" }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
-  "env": {
-    "NPM_FLAGS": "--legacy-peer-deps --force",
-    "NODE_OPTIONS": "--max_old_space_size=4096"
-  }
+  "buildCommand": "npm install --legacy-peer-deps && npm run build",
+  "outputDirectory": "www",
+  "framework": "angular",
+  "installCommand": "npm install --legacy-peer-deps"
 }
