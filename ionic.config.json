@@ -1,0 +1,7 @@
+{
+  "name": "travease",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

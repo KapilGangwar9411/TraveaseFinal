@@ -1,0 +1,38 @@
+ion-header {
+    .header_banner {
+        --animate-duration: .2s;
+        .banner_img {
+            img {
+                max-width: 165px;
+                min-width: 165px;
+            }
+        }
+    }
+}
+
+.text_container {
+    margin: 0;
+    padding: 0;
+    background: var(--white);
+    border-radius: 20px 20px 0 0;
+    min-height: calc(100vh - 172.98px);
+    max-height: calc(100vh - 172.98px);
+    --animate-duration: .2s;
+    padding: 27px;
+    overflow: hidden;
+    overflow-y: auto;
+    h2 {
+        margin: 0;
+        color: var(--text-dark);
+        font-size: 1.1rem;
+        font-weight: 500;
+        padding-bottom: 8px;
+    }
+    p {
+        margin: 0;
+        color: var(--text-dark);
+        padding-bottom: 20px;
+        font-size: 0.98rem;
+        line-height: 25px;
+    }
+}

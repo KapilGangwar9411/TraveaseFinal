@@ -1,0 +1,61 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon=""></ion-back-button>
+        </ion-buttons>
+        <ion-title></ion-title>
+    </ion-toolbar>
+    <div class="header_banner d-flex">
+        <div class="text_box">
+            <h2 class="d-flex">{{'support' | translate}}</h2>
+            <h3>{{'connect_us' | translate}}</h3>
+        </div>
+        <div class="banner_img end">
+            <img src="assets/images/support.png">
+        </div>
+    </div>
+</ion-header>
+
+<ion-content class="bg_white" fullscreen>
+    <ion-list lines="none">
+<!--
+        <ion-row>
+            <ion-col size="6" class="animate__animated animate__zoomIn">
+                <h2 class="d-flex">
+                    <ion-icon class="zmdi zmdi-phone"></ion-icon>&nbsp;&nbsp; {{'call_us' | translate}}
+                </h2>
+            </ion-col>
+
+            <ion-col size="6" class="animate__animated animate__zoomIn">
+                <h2 class="d-flex">
+                    <ion-icon class="zmdi zmdi-email"></ion-icon>&nbsp;&nbsp; {{'mail_us' | translate}}
+                </h2>
+            </ion-col>
+        </ion-row> -->
+
+        <div class="form">
+            <div class="text_box">
+                <!-- <h2 class="d-flex animate__animated animate__fadeInUp">{{'write_us' | translate}}</h2>
+                <h3 class="animate__animated animate__fadeInUp"> {{'let_us_know_your_query' | translate}}</h3> -->
+
+                <!-- <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                    <div class="item_inner">
+                        <ion-label>{{'phone_number_email' | translate}}</ion-label>
+                        <ion-input mode="md" type="name" placeholder="{{'add_contact_info' | translate}}"></ion-input>
+                    </div>
+                </ion-item> -->
+
+                <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                    <div class="item_inner">
+                        <ion-label>{{'add_your_issue' | translate}}</ion-label>
+                        <ion-textarea rows="5" auto-grow="true" mode="md" type="name" placeholder="{{'write_your_message' | translate}}"></ion-textarea>
+                    </div>
+                </ion-item>
+            </div>
+        </div>
+    </ion-list>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <ion-button size="large" class="btn animate__animated animate__fadeInUp" expand="round">{{'submit' | translate}}</ion-button>
+</ion-footer>

@@ -1,0 +1,289 @@
+.map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    ion-icon {
+        position: absolute;
+        color: var(--primary);
+        text-align: center;
+        font-size: 2.1rem;
+    }
+    .img_box {
+        position: absolute;
+        z-index: 99;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        border: 2.5px solid var(--white);
+    }
+}
+
+.ride_info {
+    background: var(--bg-color2);
+    border-radius: 20px 20px 0 0;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    padding-bottom: 269px;
+    h1 {
+        margin: 0;
+        color: var(--text-dark);
+        font-size: 1rem;
+        font-weight: 900;
+        ion-icon {
+            color: var(--text-light2);
+            font-size: 1.3rem;
+            min-width: fit-content;
+            padding: 0 2px;
+        }
+    }
+    .form {
+        padding: 0;
+        padding-top: 30px;
+        ion-row {
+            align-items: flex-end;
+        }
+        ion-list {
+            position: relative;
+            .dotts {
+                position: absolute;
+                top: 21px;
+                left: 6px;
+                width: fit-content;
+                height: fit-content;
+                span {
+                    display: block;
+                    width: 10px;
+                    height: 6px;
+                    position: relative;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        width: 2px;
+                        height: 2px;
+                        background: var(--text-light2);
+                        border-radius: 50%;
+                    }
+                }
+            }
+            ion-item {
+                padding: 0 !important;
+                border: 0 !important;
+                margin-bottom: 0px;
+                position: relative;
+                padding-bottom: 9px !important;
+                .item_inner {
+                    ion-icon {
+                        color: var(--text-light2);
+                        font-size: 1.3rem;
+                        min-width: 27px;
+                        padding: 2px 2px;
+                        position: relative;
+                        top: -2px;
+                        &.zmdi-circle {
+                            color: var(--primary);
+                            font-size: .9rem;
+                            padding-top: 3px;
+                        }
+                        &.zmdi-pin {
+                            color: var(--red_color) !important;
+                        }
+                    }
+                    .input_box {
+                        border: none !important;
+                        width: 100%;
+                        overflow: hidden;
+                        min-height: 30px;
+                        ion-select {
+                            color: var(--text-dark) !important;
+                        }
+                        h2 {
+                            font-size: 0.98rem !important;
+                            font-weight: 500 !important;
+                            margin: 0;
+                            color: var(--text-dark);
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                        }
+                        h3 {
+                            font-size: 0.8rem !important;
+                            font-weight: 400 !important;
+                            margin: 0;
+                            color: var(--text-light2);
+                            display: flex;
+                            align-items: center;
+                            strong {
+                                color: var(--primary);
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pooler_info {
+    bottom: 0 !important;
+    top: unset !important;
+    transition: all 0.5s ease 0s !important;
+    position: fixed !important;
+    right: 0 !important;
+    left: 0 !important;
+    background: var(--white);
+    max-height: calc(100vh - 70px);
+    min-height: 195px;
+    z-index: 99;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    box-shadow: 0 3px 20px 4px #a4a4a47a;
+    padding-bottom: 100px;
+    .pullup {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 25px;
+        z-index: 999;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 76px;
+            height: 5px;
+            margin: auto;
+            background: var(--bg-color);
+            border-radius: 5px;
+        }
+    }
+    ion-card {
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 30px 0px 20px 0px;
+        border-bottom: 5px solid var(--bg-color);
+        &:last-child {
+            border-bottom: 0px solid var(--bg-color);
+        }
+        .co_passengers {
+            // border-bottom: 5px solid var(--bg-color);
+            h2 {
+                margin: 0;
+                padding: 0 20px;
+                color: var(--text-light2);
+                font-size: 0.92rem;
+                padding-bottom: 17px;
+            }
+            .scroll-x {
+                overflow: hidden;
+                white-space: nowrap;
+                overflow-x: auto;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                .scroll-item {
+                    display: inline-block;
+                    margin: 0px 10px;
+                    min-width: 68px;
+                    max-width: 68px;
+                    .img_box {
+                        display: block;
+                        margin: 0 auto;
+                        width: 42px;
+                        height: 42px;
+                        border-radius: 50%;
+                        margin-bottom: 7px;
+                        ion-icon {
+                            font-size: 2.8rem;
+                            margin: 0 auto;
+                            display: block;
+                            color: var(--text-light3);
+                            min-width: 45px;
+                            height: 45px;
+                        }
+                    }
+                    h3 {
+                        margin: 0;
+                        color: var(--text-light3);
+                        font-size: 0.75rem;
+                        font-weight: 400;
+                        line-height: 16px;
+                    }
+                    &.active {
+                        h3 {
+                            color: var(--text-dark);
+                            font-weight: 500;
+                        }
+                    }
+                    &:first-child {
+                        margin-left: 20px;
+                    }
+                    &:last-child {
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.btn_box {
+    padding: 15px 20px;
+    background: var(--white);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    padding-bottom: 30px;
+    .icon_box {
+        position: relative;
+        border: 2px solid var(--primary);
+        min-width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        margin-right: 15px;
+        overflow: hidden;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary);
+            opacity: .2;
+        }
+        ion-icon {
+            color: var(--primary);
+            position: relative;
+            z-index: 99;
+            width: 48px;
+            text-align: center;
+            line-height: 52px;
+            height: 53px;
+            font-size: 1.5rem;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    .button.btn ion-icon {
+        position: absolute;
+        left: 6px;
+    }
+}

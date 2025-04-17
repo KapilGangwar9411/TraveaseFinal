@@ -1,0 +1,441 @@
+<ion-header class="bg_transparent">
+    <ion-toolbar>
+        <ion-title>{{'chats' | translate}}</ion-title>
+    </ion-toolbar>
+    <!-- <ion-segment mode="ios" (ionChange)="segmentChanged()" [(ngModel)]="segment" lines="none">
+        <ion-segment-button mode="ios" value="0">
+            <ion-label class=ion-text-start>
+                {{'live_chat' | translate}}
+            </ion-label>
+        </ion-segment-button>
+        <ion-segment-button mode="ios" value="1">
+            <ion-label class=ion-text-start>
+                {{'archive' | translate}}
+            </ion-label>
+        </ion-segment-button>
+    </ion-segment> -->
+</ion-header>
+
+<ion-content fullscreen class="bg_color">
+    <div class="tab_content">
+        <!-- <ion-slides #slides (ionSlideDidChange)="slideChanged()">
+            <ion-slide>
+
+            </ion-slide>
+
+            <ion-slide>
+                <ion-list lines="none">
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="img_box center_img" slot="start">
+                            <img src="assets/images/profiles/5.png" class="crop_img">
+                        </div>
+                        <ion-label>
+                            <h2> Samantha Smith </h2>
+                            <h3 class="d-flex">
+                                <span class="message">
+                                No worries, I will be there on time.
+                              </span>
+                                <span class="end">
+                                20 min
+                              </span>
+                            </h3>
+                        </ion-label>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="img_box center_img" slot="start">
+                            <img src="assets/images/profiles/9.png" class="crop_img">
+                        </div>
+                        <ion-label>
+                            <h2>Alisha Patel</h2>
+                            <h3 class="d-flex">
+                                <span class="message">
+                              No worries, ma'm. I will do it.
+                            </span>
+                                <span class="end">
+                              20 min
+                            </span>
+                            </h3>
+                        </ion-label>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="img_box center_img" slot="start">
+                            <img src="assets/images/profiles/8.png" class="crop_img">
+                        </div>
+                        <ion-label>
+                            <h2>Peter Johnson</h2>
+                            <h3 class="d-flex">
+                                <span class="message">
+                            No worries, ma'm. I will do it.
+                          </span>
+                                <span class="end">
+                            20 min
+                          </span>
+                            </h3>
+                        </ion-label>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="img_box center_img" slot="start">
+                            <img src="assets/images/profiles/6.png" class="crop_img">
+                        </div>
+                        <ion-label>
+                            <h2>Linda Haydon</h2>
+                            <h3 class="d-flex">
+                                <span class="message">
+                            No worries, ma'm. I will do it.
+                          </span>
+                                <span class="end">
+                            20 min
+                          </span>
+                            </h3>
+                        </ion-label>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="img_box center_img" slot="start">
+                            <img src="assets/images/profiles/7.png" class="crop_img">
+                        </div>
+                        <ion-label>
+                            <h2>Alisha Patel</h2>
+                            <h3 class="d-flex">
+                                <span class="message">
+                          No worries, ma'm. I will do it.
+                        </span>
+                                <span class="end">
+                          20 min
+                        </span>
+                            </h3>
+                        </ion-label>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="img_box center_img" slot="start">
+                            <img src="assets/images/profiles/5.png" class="crop_img">
+                        </div>
+                        <ion-label>
+                            <h2> Samantha Smith </h2>
+                            <h3 class="d-flex">
+                                <span class="message">
+                              No worries, I will be there on time.
+                            </span>
+                                <span class="end">
+                              20 min
+                            </span>
+                            </h3>
+                        </ion-label>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="img_box center_img" slot="start">
+                            <img src="assets/images/profiles/9.png" class="crop_img">
+                        </div>
+                        <ion-label>
+                            <h2>Alisha Patel</h2>
+                            <h3 class="d-flex">
+                                <span class="message">
+                            No worries, ma'm. I will do it.
+                          </span>
+                                <span class="end">
+                            20 min
+                          </span>
+                            </h3>
+                        </ion-label>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="img_box center_img" slot="start">
+                            <img src="assets/images/profiles/8.png" class="crop_img">
+                        </div>
+                        <ion-label>
+                            <h2>Peter Johnson</h2>
+                            <h3 class="d-flex">
+                                <span class="message">
+                          No worries, ma'm. I will do it.
+                        </span>
+                                <span class="end">
+                          20 min
+                        </span>
+                            </h3>
+                        </ion-label>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="img_box center_img" slot="start">
+                            <img src="assets/images/profiles/6.png" class="crop_img">
+                        </div>
+                        <ion-label>
+                            <h2>Linda Haydon</h2>
+                            <h3 class="d-flex">
+                                <span class="message">
+                          No worries, ma'm. I will do it.
+                        </span>
+                                <span class="end">
+                          20 min
+                        </span>
+                            </h3>
+                        </ion-label>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="img_box center_img" slot="start">
+                            <img src="assets/images/profiles/7.png" class="crop_img">
+                        </div>
+                        <ion-label>
+                            <h2>Alisha Patel</h2>
+                            <h3 class="d-flex">
+                                <span class="message">
+                        No worries, ma'm. I will do it.
+                      </span>
+                                <span class="end">
+                        20 min
+                      </span>
+                            </h3>
+                        </ion-label>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="img_box center_img" slot="start">
+                            <img src="assets/images/profiles/5.png" class="crop_img">
+                        </div>
+                        <ion-label>
+                            <h2> Samantha Smith </h2>
+                            <h3 class="d-flex">
+                                <span class="message">
+                            No worries, I will be there on time.
+                          </span>
+                                <span class="end">
+                            20 min
+                          </span>
+                            </h3>
+                        </ion-label>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                        <div class="img_box center_img" slot="start">
+                            <img src="assets/images/profiles/9.png" class="crop_img">
+                        </div>
+                        <ion-label>
+                            <h2>Alisha Patel</h2>
+                            <h3 class="d-flex">
+                                <span class="message">
+                          No worries, ma'm. I will do it.
+                        </span>
+                                <span class="end">
+                          20 min
+                        </span>
+                            </h3>
+                        </ion-label>
+                    </ion-item>
+                </ion-list>
+            </ion-slide>
+        </ion-slides> -->
+
+        <ion-list lines="none">
+            <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                <div class="img_box center_img" slot="start">
+                    <img src="assets/images/profiles/5.png" class="crop_img">
+                </div>
+                <ion-label>
+                    <h2> Samantha Smith </h2>
+                    <h3 class="d-flex">
+                        <span class="message">
+                          No worries, I will be there on time.
+                        </span>
+                        <span class="end">
+                          20 min
+                        </span>
+                    </h3>
+                </ion-label>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                <div class="img_box center_img" slot="start">
+                    <img src="assets/images/profiles/9.png" class="crop_img">
+                </div>
+                <ion-label>
+                    <h2>Alisha Patel</h2>
+                    <h3 class="d-flex">
+                        <span class="message">
+                        No worries, ma'm. I will do it.
+                      </span>
+                        <span class="end">
+                        20 min
+                      </span>
+                    </h3>
+                </ion-label>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                <div class="img_box center_img" slot="start">
+                    <img src="assets/images/profiles/8.png" class="crop_img">
+                </div>
+                <ion-label>
+                    <h2>Peter Johnson</h2>
+                    <h3 class="d-flex">
+                        <span class="message">
+                      No worries, ma'm. I will do it.
+                    </span>
+                        <span class="end">
+                      20 min
+                    </span>
+                    </h3>
+                </ion-label>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                <div class="img_box center_img" slot="start">
+                    <img src="assets/images/profiles/6.png" class="crop_img">
+                </div>
+                <ion-label>
+                    <h2>Linda Haydon</h2>
+                    <h3 class="d-flex">
+                        <span class="message">
+                      No worries, ma'm. I will do it.
+                    </span>
+                        <span class="end">
+                      20 min
+                    </span>
+                    </h3>
+                </ion-label>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                <div class="img_box center_img" slot="start">
+                    <img src="assets/images/profiles/7.png" class="crop_img">
+                </div>
+                <ion-label>
+                    <h2>Alisha Patel</h2>
+                    <h3 class="d-flex">
+                        <span class="message">
+                    No worries, ma'm. I will do it.
+                  </span>
+                        <span class="end">
+                    20 min
+                  </span>
+                    </h3>
+                </ion-label>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                <div class="img_box center_img" slot="start">
+                    <img src="assets/images/profiles/5.png" class="crop_img">
+                </div>
+                <ion-label>
+                    <h2> Samantha Smith </h2>
+                    <h3 class="d-flex">
+                        <span class="message">
+                        No worries, I will be there on time.
+                      </span>
+                        <span class="end">
+                        20 min
+                      </span>
+                    </h3>
+                </ion-label>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                <div class="img_box center_img" slot="start">
+                    <img src="assets/images/profiles/9.png" class="crop_img">
+                </div>
+                <ion-label>
+                    <h2>Alisha Patel</h2>
+                    <h3 class="d-flex">
+                        <span class="message">
+                      No worries, ma'm. I will do it.
+                    </span>
+                        <span class="end">
+                      20 min
+                    </span>
+                    </h3>
+                </ion-label>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                <div class="img_box center_img" slot="start">
+                    <img src="assets/images/profiles/8.png" class="crop_img">
+                </div>
+                <ion-label>
+                    <h2>Peter Johnson</h2>
+                    <h3 class="d-flex">
+                        <span class="message">
+                    No worries, ma'm. I will do it.
+                  </span>
+                        <span class="end">
+                    20 min
+                  </span>
+                    </h3>
+                </ion-label>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                <div class="img_box center_img" slot="start">
+                    <img src="assets/images/profiles/6.png" class="crop_img">
+                </div>
+                <ion-label>
+                    <h2>Linda Haydon</h2>
+                    <h3 class="d-flex">
+                        <span class="message">
+                    No worries, ma'm. I will do it.
+                  </span>
+                        <span class="end">
+                    20 min
+                  </span>
+                    </h3>
+                </ion-label>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                <div class="img_box center_img" slot="start">
+                    <img src="assets/images/profiles/7.png" class="crop_img">
+                </div>
+                <ion-label>
+                    <h2>Alisha Patel</h2>
+                    <h3 class="d-flex">
+                        <span class="message">
+                  No worries, ma'm. I will do it.
+                </span>
+                        <span class="end">
+                  20 min
+                </span>
+                    </h3>
+                </ion-label>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                <div class="img_box center_img" slot="start">
+                    <img src="assets/images/profiles/5.png" class="crop_img">
+                </div>
+                <ion-label>
+                    <h2> Samantha Smith </h2>
+                    <h3 class="d-flex">
+                        <span class="message">
+                      No worries, I will be there on time.
+                    </span>
+                        <span class="end">
+                      20 min
+                    </span>
+                    </h3>
+                </ion-label>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="conversation()">
+                <div class="img_box center_img" slot="start">
+                    <img src="assets/images/profiles/9.png" class="crop_img">
+                </div>
+                <ion-label>
+                    <h2>Alisha Patel</h2>
+                    <h3 class="d-flex">
+                        <span class="message">
+                    No worries, ma'm. I will do it.
+                  </span>
+                        <span class="end">
+                    20 min
+                  </span>
+                    </h3>
+                </ion-label>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>

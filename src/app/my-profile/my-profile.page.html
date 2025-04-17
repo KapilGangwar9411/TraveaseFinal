@@ -1,0 +1,225 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon=""></ion-back-button>
+        </ion-buttons>
+        <ion-title></ion-title>
+    </ion-toolbar>
+
+    <div class="header_banner d-flex animate__animated animate__fadeInUp">
+        <div class="text_box">
+            <h2>{{'my_profile' | translate}}</h2>
+            <h3>{{'everthing_about_you' | translate}}</h3>
+        </div>
+        <div class="img_section end d-flex">
+            <div class="img_box center_img end">
+                <img src="assets/images/profiles/user_profile.png" class="crop_img">
+            </div>
+            <ion-icon class="zmdi zmdi-camera ion-text-center"></ion-icon>
+        </div>
+    </div>
+
+    <ion-segment mode="ios" [(ngModel)]="segment" (ionChange)="onSegmentChange($event)">
+        <ion-segment-button mode="ios" value="0">
+            <ion-label class=ion-text-start>
+                {{'profile_info' | translate}}
+            </ion-label>
+        </ion-segment-button>
+        <ion-segment-button mode="ios" value="1">
+            <ion-label class=ion-text-start>
+                {{'account_info' | translate}}
+            </ion-label>
+        </ion-segment-button>
+        <ion-segment-button mode="ios" value="2">
+            <ion-label class=ion-text-start>
+                {{'my_vehicle' | translate}}
+            </ion-label>
+        </ion-segment-button>
+    </ion-segment>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <swiper-container class="swiper-container" id="swiper4" (swiperslidechange)="onSlideChange($event)">
+        <!--   Profile Info section start -->
+        <div class="swiper-slide">
+            <div class="form animate__animated animate__fadeInUp">
+                <ion-list lines="none">
+                    <ion-card>
+                        <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                            <div class="item_inner">
+                                <ion-label>{{'cumpany_name' | translate}}</ion-label>
+                                <ion-input mode="md" type="name" placeholder="{{'enter_cumpany_name' | translate}}"
+                                    value="Opus Labworks"></ion-input>
+                            </div>
+                        </ion-item>
+                        <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                            <div class="item_inner">
+                                <ion-label>{{'corporate_email_address' | translate}}</ion-label>
+                                <div class="input_box d-flex">
+                                    <ion-input mode="md" type="email"
+                                        placeholder="{{'enter_corporate_email_address' | translate}}"
+                                        value="samantha@opus.labworks"></ion-input>
+                                    <ion-icon class="zmdi zmdi-shield-check ion-text-end end"></ion-icon>
+                                </div>
+                            </div>
+                        </ion-item>
+                    </ion-card>
+
+                    <ion-card>
+                        <ion-item class="animate__animated animate__fadeInUp no-border" lines="none">
+                            <div class="item_inner">
+                                <ion-label>{{'goverment_id' | translate}}</ion-label>
+                                <div class="input_box d-flex">
+                                    <h3>GovermentID.pdf</h3>
+                                    <ion-icon class="zmdi zmdi-shield-check ion-text-end end"></ion-icon>
+                                </div>
+                            </div>
+                        </ion-item>
+                        <ion-item class="animate__animated animate__fadeInUp no-border" lines="none">
+                            <div class="item_inner">
+                                <ion-label>{{'driving_licence' | translate}}</ion-label>
+                                <div class="input_box d-flex">
+                                    <h3>drivinglicence.jpg</h3>
+                                    <ion-icon class="zmdi zmdi-shield-check ion-text-end end"></ion-icon>
+                                </div>
+                            </div>
+                        </ion-item>
+                    </ion-card>
+
+                    <ion-card>
+                        <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                            <div class="item_inner">
+                                <ion-label>{{'short_bio' | translate}}</ion-label>
+                                <ion-input mode="md" type="text" placeholder="{{'enter_your_short_bio' | translate}}"
+                                    value="Jolly, Fun loving, Friendly, Foodie"></ion-input>
+                            </div>
+                        </ion-item>
+                        <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                            <div class="item_inner">
+                                <ion-label>{{'hobbies' | translate}}</ion-label>
+                                <ion-input mode="md" type="text" placeholder="{{'enter_your_hobbies' | translate}}"
+                                    value="Listening Music, Travelling, Golf"></ion-input>
+                            </div>
+                        </ion-item>
+                    </ion-card>
+                </ion-list>
+            </div>
+
+            <div class="btn_box">
+                <ion-button size="large" class="btn animate__animated animate__fadeInUp"
+                    style="--animate-duration: .4s;" expand="round">{{'continue' | translate}}</ion-button>
+            </div>
+        </div>
+        <!--   Profile Info section end -->
+
+        <!--   Account Info section start -->
+        <div class="swiper-slide account_info">
+            <div class="form animate__animated animate__fadeInUp">
+                <ion-list lines="none">
+                    <ion-card>
+                        <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                            <div class="item_inner">
+                                <ion-label>{{'full_name' | translate}}</ion-label>
+                                <ion-input mode="md" type="name" placeholder="{{'enter_full_name' | translate}}"
+                                    value="Samantha Smith" readonly></ion-input>
+                            </div>
+                        </ion-item>
+
+                        <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                            <div class="item_inner">
+                                <ion-label>{{'email_address' | translate}}</ion-label>
+                                <ion-input mode="md" type="email" placeholder="{{'enter_email_address' | translate}}"
+                                    value="samanthasmith@mail.com" readonly></ion-input>
+                            </div>
+                        </ion-item>
+
+                        <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                            <div class="item_inner">
+                                <ion-label>{{'phone_number' | translate}}</ion-label>
+                                <ion-input mode="md" type="text" placeholder="{{'enter_mobile_number' | translate}}"
+                                    value="+1 987 654 3210" readonly></ion-input>
+                            </div>
+                        </ion-item>
+                    </ion-card>
+                </ion-list>
+            </div>
+            <!-- 
+            <div class="btn_box" (click)="logout()">
+                <ion-button size="large" class="btn animate__animated animate__fadeInUp" expand="round">{{'logout' |
+                    translate}}</ion-button>
+            </div> -->
+        </div>
+        <!--   Account Info section end -->
+
+        <!--   My Vehicle section start -->
+        <div class="swiper-slide account_info">
+            <div class="form animate__animated animate__fadeInUp">
+                <ion-list lines="none">
+                    <ion-card>
+                        <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                            <div class="item_inner">
+                                <ion-label>{{'vehicle_type' | translate}}</ion-label>
+                                <ion-input mode="md" type="name" placeholder="{{'enter_full_name' | translate}}"
+                                    value="Hatchbacks"></ion-input>
+                            </div>
+                        </ion-item>
+                        <ion-item class="animate__animated animate__fadeInUp " lines="none ">
+                            <div class="item_inner ">
+                                <ion-label>{{'vehicle_name' | translate}}</ion-label>
+                                <div class="input_box d-flex ">
+                                    <ion-input mode="md " type="name "
+                                        placeholder="{{ 'enter_vehicle_name' | translate}} "
+                                        value="Toyotal Matrix "></ion-input>
+                                </div>
+                            </div>
+                        </ion-item>
+                        <ion-item class="animate__animated animate__fadeInUp " lines="none ">
+                            <div class="item_inner ">
+                                <ion-label>{{'vehicle_reg_number' | translate}}</ion-label>
+                                <div class="input_box d-flex ">
+                                    <ion-input mode="md " type="name "
+                                        placeholder="{{ 'enter_vehicle_reg_number' | translate}} "
+                                        value="NYC55142 "></ion-input>
+                                </div>
+                            </div>
+                        </ion-item>
+                    </ion-card>
+
+                    <ion-card>
+                        <ion-item class="animate__animated animate__fadeInUp " lines="none ">
+                            <div class="item_inner ">
+                                <ion-label>{{'facilities' | translate}} (i.e AC, {{'extra_luggage' | translate}},
+                                    {{'etc' | translate}})</ion-label>
+                                <div class="input_box d-flex ">
+                                    <ion-input mode="md " type="text "
+                                        placeholder="{{ 'enter_facilities' | translate}} "
+                                        value="AC, Luggage Space, Music System "></ion-input>
+                                </div>
+                            </div>
+                        </ion-item>
+
+                        <ion-item class="animate__animated animate__fadeInUp " lines="none ">
+                            <div class="item_inner ">
+                                <ion-label>{{'intructions' | translate}} (i.e {{'no_smoking_pets' |
+                                    translate}})</ion-label>
+                                <div class="input_box d-flex ">
+                                    <ion-input mode="md " type="text "
+                                        placeholder="{{ 'enter_intructions' | translate}} "
+                                        value="Smoking Not Allowed, Pets are allowed "></ion-input>
+                                </div>
+                            </div>
+                        </ion-item>
+                    </ion-card>
+                </ion-list>
+            </div>
+            <ion-button size="large" class="btn animate__animated animate__fadeInUp" expand="round">
+                {{'update' | translate}}
+            </ion-button>
+        </div>
+        <!--   My Vehicle section end -->
+    </swiper-container>
+</ion-content>
+<!-- 
+<ion-footer class="ion-no-border">
+    <ion-button size="large" class="btn animate__animated animate__fadeInUp" expand="round">{{'logout' | translate}}</ion-button>
+</ion-footer> -->

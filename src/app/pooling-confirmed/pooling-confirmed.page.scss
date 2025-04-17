@@ -1,0 +1,39 @@
+ion-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 75px;
+    width: 100%;
+    border-radius: 0;
+    height: fit-content;
+    margin: auto;
+    background: none;
+    box-shadow: none;
+    padding: 20px;
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 210px;
+        margin-bottom: 45px;
+    }
+    h1 {
+        margin: 0;
+        color: var(--text-dark);
+        font-size: 1.5rem;
+        padding-bottom: 10px;
+        letter-spacing: .5px;
+    }
+    p {
+        margin: 0;
+        color: var(--text-light);
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: .5px;
+    }
+}
+
+ion-footer {
+    padding: 20px;
+}

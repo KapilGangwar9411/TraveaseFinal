@@ -1,0 +1,68 @@
+<ion-header class="bg_transparent">
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon=""></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            <div class="profile_about d-flex">
+                <div class="img_content" slot="start">
+                    <div class="img_box center_img">
+                        <img src="assets/images/profiles/5.png" class="crop_img">
+                    </div>
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        <span class="name">Samantha Smith</span>
+                    </h2>
+                </div>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="container animate__animated animate__fadeInUp">
+        <div class="chat_container d-flex">
+            <div class="chat_box d-flex animate__animated animate__zoomIn received">
+                <div class="chat">
+                    <h2>Hello Sir ! <br>What time you reach my place</h2>
+                    <p>20 min</p>
+                </div>
+            </div>
+
+            <div class="chat_box d-flex animate__animated animate__zoomIn send">
+                <div class="chat">
+                    <h2>I will be there around 10:00 am. <br>Please be in time.</h2>
+                    <p>20 min</p>
+                </div>
+            </div>
+
+            <div class="chat_box d-flex animate__animated animate__zoomIn received">
+                <div class="chat">
+                    <h2>No Worries, <br>I will be there on time.</h2>
+                    <p>20 min</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border ">
+    <div class="form d-flex animate__animated animate__fadeInUp">
+        <ion-list lines="none d-flex">
+            <ion-item lines="none">
+                <ion-textarea rows="1" auto-grow="true" type="text"
+                    placeholder="{{'write_your_meassage' | translate}}"></ion-textarea>
+            </ion-item>
+
+            <!-- <div class="attachment_btn end">
+                <ion-icon class="zmdi zmdi-attachment ion-text-end"></ion-icon>
+            </div> -->
+        </ion-list>
+        &nbsp;&nbsp;
+
+        <div class="send_btn end animate__animated animate__zoomIn">
+            <ion-icon class="zmdi zmdi-mail-send"></ion-icon>
+        </div>
+    </div>
+</ion-footer>

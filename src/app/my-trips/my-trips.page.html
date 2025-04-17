@@ -1,0 +1,95 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/tabs/profile"></ion-back-button>
+        </ion-buttons>
+        <ion-title>My Trips</ion-title>
+        <ion-badge color="warning" style="margin-right: 10px;" *ngIf="useMockData">Using Demo Data</ion-badge>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <!-- Refresh Control -->
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
+    <!-- Segment Controller -->
+    <ion-segment [(ngModel)]="segment" (ionChange)="segmentChanged($event)" mode="md">
+        <ion-segment-button value="offering">
+            <ion-label>Rides Offered</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="finding">
+            <ion-label>Rides Requested</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+
+    <!-- Loading Spinner -->
+    <div class="loading-container" *ngIf="isLoading">
+        <ion-spinner name="circles"></ion-spinner>
+    </div>
+
+    <!-- No Rides Placeholder - Offering -->
+    <div class="no-rides" *ngIf="!isLoading && segment === 'offering' && offeredRides.length === 0">
+        <ion-icon name="car-outline"></ion-icon>
+        <h3>No rides offered yet</h3>
+        <p>Start offering rides to your destination and help others reach theirs.</p>
+        <ion-button (click)="createRide()" expand="block">Offer a Ride</ion-button>
+    </div>
+
+    <!-- No Rides Placeholder - Finding -->
+    <div class="no-rides" *ngIf="!isLoading && segment === 'finding' && findingRides.length === 0">
+        <ion-icon name="search-outline"></ion-icon>
+        <h3>No ride requests yet</h3>
+        <p>Find rides by searching for your destination.</p>
+        <ion-button routerLink="/tabs/home" expand="block">Find a Ride</ion-button>
+    </div>
+
+    <!-- Rides Offered -->
+    <div *ngIf="!isLoading && segment === 'offering' && offeredRides.length > 0">
+        <ion-list>
+            <ion-item-sliding *ngFor="let ride of offeredRides">
+                <ion-item detail (click)="viewRideDetails(ride)">
+                    <ion-label>
+                        <h2>{{ ride.origin?.name || ride.sourceLocation }} to {{ ride.destination?.name || ride.destinationLocation }}</h2>
+                        <p>{{ formatDate(ride.departureTime) }}</p>
+                        <p>{{ ride.availableSeats || 0 }} seats available • {{ (ride.price || ride.pricePerSeat) | currency }}</p>
+                        <ion-badge color="primary" *ngIf="ride.status === 'active'">Active</ion-badge>
+                        <ion-badge color="medium" *ngIf="ride.status === 'completed'">Completed</ion-badge>
+                        <ion-badge color="danger" *ngIf="ride.status === 'cancelled'">Cancelled</ion-badge>
+                    </ion-label>
+                </ion-item>
+                <ion-item-options side="end" *ngIf="ride.status === 'active'">
+                    <ion-item-option color="danger" (click)="cancelRide(ride)">
+                        <ion-icon slot="icon-only" name="close-circle"></ion-icon>
+                        Cancel
+                    </ion-item-option>
+                </ion-item-options>
+            </ion-item-sliding>
+        </ion-list>
+    </div>
+
+    <!-- Rides Requested -->
+    <div *ngIf="!isLoading && segment === 'finding' && findingRides.length > 0">
+        <ion-list>
+            <ion-item *ngFor="let ride of findingRides" detail (click)="viewRideDetails(ride)">
+                <ion-label>
+                    <h2>{{ ride.origin?.name || ride.sourceLocation }} to {{ ride.destination?.name || ride.destinationLocation }}</h2>
+                    <p>{{ formatDate(ride.departureTime) }}</p>
+                    <p>{{ ride.driver?.name || 'No driver assigned' }}</p>
+                    <ion-badge color="success" *ngIf="ride.status === 'confirmed'">Confirmed</ion-badge>
+                    <ion-badge color="warning" *ngIf="ride.status === 'pending'">Pending</ion-badge>
+                    <ion-badge color="medium" *ngIf="ride.status === 'completed'">Completed</ion-badge>
+                    <ion-badge color="danger" *ngIf="ride.status === 'cancelled'">Cancelled</ion-badge>
+                </ion-label>
+            </ion-item>
+        </ion-list>
+    </div>
+
+    <!-- Floating Action Button - Create Ride -->
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed" *ngIf="segment === 'offering'">
+        <ion-fab-button (click)="createRide()">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>

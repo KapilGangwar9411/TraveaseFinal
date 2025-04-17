@@ -1,0 +1,232 @@
+<ion-header class="bg_transparent">
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon=""></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            <div class="title-inner d-flex">
+                <ion-icon class="zmdi zmdi-navigation ion-text-center end"></ion-icon>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+    <div class="map">
+        <img src="assets/images/map_2.png">
+        <div class="img_box center_img" style="top: 36%; right: 49%;">
+            <img src="assets/images/profiles/5.png">
+        </div>
+        <div class="img_box center_img" style="top: 17%; right: 29%;">
+            <img src="assets/images/profiles/4.png">
+        </div>
+    </div>
+
+    <div #contentElement id="content-inner" class="pooler_info animate__animated animate__fadeInUp" style="--animate-duration: .3s;">
+        <div class="pullup" (click)="closeContainer()"></div>
+
+        <ion-card class="drop">
+
+            <h1 class="d-flex" id="trigger-button">{{'trip_roadmap' | translate}}
+                <!-- <ion-icon class="zmdi zmdi-more-vert end ion-text-end"></ion-icon> -->
+            </h1>
+
+            <div class="profile_about d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/profiles/5.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        <span class="name">Samantha Smith</span>
+                        <span class="end">
+                            <ion-icon class="zmdi zmdi-long-arrow-down ion-text-start"></ion-icon>
+                            {{'drop' | translate}}
+                        </span>
+                    </h2>
+                </div>
+            </div>
+
+            <div class="form">
+                <ion-list lines="none">
+                    <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                        <div class="item_inner d-flex">
+                            <ion-icon class="zmdi zmdi-circle ion-text-start"></ion-icon>
+                            <div class="input_box">
+                                <h2 class="d-flex">
+                                    1024, Central Park, Hemiltone, New York
+                                </h2>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <div class="dotts">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                        <div class="item_inner d-flex">
+                            <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                            <div class="input_box">
+                                <h2 class="d-flex">
+                                    M141, NY Food Center, Williomson st, lllinois
+                                </h2>
+                            </div>
+                        </div>
+                    </ion-item>
+                </ion-list>
+            </div>
+        </ion-card>
+
+        <ion-card class="pick">
+            <div class="profile_about d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/profiles/4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        <span class="name">Peter Taylor</span>
+                        <span class="end">
+                            <ion-icon class="zmdi zmdi-long-arrow-up ion-text-start"></ion-icon>
+                            {{'pick' | translate}}
+                        </span>
+                    </h2>
+                </div>
+            </div>
+
+            <div class="form">
+                <ion-list lines="none">
+                    <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                        <div class="item_inner d-flex">
+                            <ion-icon class="zmdi zmdi-circle ion-text-start"></ion-icon>
+                            <div class="input_box">
+                                <h2 class="d-flex">
+                                    1024, Central Park, Hemiltone, New York
+                                </h2>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <div class="dotts">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                        <div class="item_inner d-flex">
+                            <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                            <div class="input_box">
+                                <h2 class="d-flex">
+                                    M141, NY Food Center, Williomson st, lllinois
+                                </h2>
+                            </div>
+                        </div>
+                    </ion-item>
+                </ion-list>
+            </div>
+        </ion-card>
+
+
+        <ion-card class="pick">
+            <div class="profile_about d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/profiles/1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        <span class="name">Emilli Williomson</span>
+                        <span class="end">
+                            <ion-icon class="zmdi zmdi-long-arrow-up ion-text-start"></ion-icon>
+                            {{'pick' | translate}}
+                        </span>
+                    </h2>
+                </div>
+            </div>
+
+            <div class="form">
+                <ion-list lines="none">
+                    <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                        <div class="item_inner d-flex">
+                            <ion-icon class="zmdi zmdi-circle ion-text-start"></ion-icon>
+                            <div class="input_box">
+                                <h2 class="d-flex">
+                                    1024, Central Park, Hemiltone, New York
+                                </h2>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <div class="dotts">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                        <div class="item_inner d-flex">
+                            <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                            <div class="input_box">
+                                <h2 class="d-flex">
+                                    M141, NY Food Center, Williomson st, lllinois
+                                </h2>
+                            </div>
+                        </div>
+                    </ion-item>
+                </ion-list>
+            </div>
+        </ion-card>
+
+        <ion-card class="pick">
+            <div class="profile_about d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/profiles/7.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        <span class="name">Josh Haydon</span>
+                        <span class="end">
+                            <ion-icon class="zmdi zmdi-long-arrow-up ion-text-start"></ion-icon>
+                            {{'pick' | translate}}
+                        </span>
+                    </h2>
+                </div>
+            </div>
+
+            <div class="form">
+                <ion-list lines="none">
+                    <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                        <div class="item_inner d-flex">
+                            <ion-icon class="zmdi zmdi-circle ion-text-start"></ion-icon>
+                            <div class="input_box">
+                                <h2 class="d-flex">
+                                    1024, Central Park, Hemiltone, New York
+                                </h2>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <div class="dotts">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                        <div class="item_inner d-flex">
+                            <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                            <div class="input_box">
+                                <h2 class="d-flex">
+                                    M141, NY Food Center, Williomson st, lllinois
+                                </h2>
+                            </div>
+                        </div>
+                    </ion-item>
+                </ion-list>
+            </div>
+        </ion-card>
+
+        <div class="btn_box">
+            <ion-button size="large" class="btn end_ride" expand="round" (click)="rate_ride_taker()">
+                {{'end_ride' | translate}}
+            </ion-button>
+        </div>
+    </div>
+</ion-content>

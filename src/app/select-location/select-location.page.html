@@ -1,0 +1,106 @@
+<ion-header class="bg_transparent">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon=""></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            {{ fieldTitle || ('select_location' | translate) }}
+        </ion-title>
+    </ion-toolbar>
+    <div class="search_box d-flex">
+        <ion-icon class="zmdi zmdi-search ion-text-start"></ion-icon>
+        <ion-searchbar
+            mode="md"
+            class=""
+            searchIcon="hide"
+            placeholder="{{'enter_location' | translate}}"
+            [(ngModel)]="searchTerm"
+            (ionInput)="onSearchInput($event)"
+            (ionClear)="clearSearch()">
+        </ion-searchbar>
+    </div>
+</ion-header>
+
+<ion-content fullscreen>
+    <!-- Loading spinner -->
+    <div class="loading-container" *ngIf="isLoading">
+        <ion-spinner name="crescent"></ion-spinner>
+    </div>
+
+    <!-- Location status indicator - only show when using default location -->
+    <div class="location-status" *ngIf="proximity === '77.2090,28.6139'">
+        <ion-icon name="location-outline"></ion-icon>
+        <span>Using default location</span>
+        <ion-button fill="clear" size="small" (click)="getCurrentPosition()">Retry</ion-button>
+    </div>
+
+    <ion-list lines="none">
+        <ion-item class="animate__animated animate__fadeInUp pin_on_map" (click)="locationSelected()">
+            <div class="item_inner d-flex">
+                <ion-icon class="zmdi zmdi zmdi-pin-drop"></ion-icon>
+                <div class="text_box">
+                    <h2 class="d-flex">{{'pin_on_map' | translate}}</h2>
+                </div>
+            </div>
+        </ion-item>
+
+        <!-- Places autocomplete results -->
+        <ion-item
+            class="animate__animated animate__fadeInUp"
+            *ngFor="let place of places"
+            (click)="locationSelected(place)">
+            <div class="item_inner d-flex">
+                <ion-icon class="zmdi zmdi-pin"></ion-icon>
+                <div class="text_box">
+                    <h2 class="d-flex">{{ place.text }}</h2>
+                    <h3>{{ place.place_name }}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <!-- Recent locations (can be replaced with actual recents from storage) -->
+        <ng-container *ngIf="places.length === 0 && !searchTerm">
+            <ion-item-divider class="recent-divider">
+                <ion-label>Recent Locations</ion-label>
+            </ion-item-divider>
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="locationSelected()">
+                <div class="item_inner d-flex">
+                    <ion-icon class="zmdi zmdi-home"></ion-icon>
+                    <div class="text_box">
+                        <h2 class="d-flex">{{'home' | translate}}</h2>
+                        <h3>B121 - Galaxy Residency, Hemiltone Tower, <br>New York, UAS.</h3>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="locationSelected()">
+                <div class="item_inner d-flex">
+                    <ion-icon class="zmdi zmdi-case-check"></ion-icon>
+                    <div class="text_box">
+                        <h2 class="d-flex">{{'office' | translate}}</h2>
+                        <h3> 104 Business House, Near City Bank, <br>New York, UAS.</h3>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="locationSelected()">
+                <div class="item_inner d-flex">
+                    <ion-icon class="zmdi zmdi-nature-people"></ion-icon>
+                    <div class="text_box">
+                        <h2 class="d-flex">{{'other' | translate}}</h2>
+                        <h3> 1141, Peter Farm House, Cith Gardern Villas <br>New York, UAS.</h3>
+                    </div>
+                </div>
+            </ion-item>
+        </ng-container>
+
+        <!-- No results message -->
+        <ion-item *ngIf="searchTerm && searchTerm.length >= 2 && places.length === 0 && !isLoading" lines="none" class="no-results">
+            <div class="text-center w-100">
+                <ion-icon name="search-outline" class="no-results-icon"></ion-icon>
+                <p>No locations found</p>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>

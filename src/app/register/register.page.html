@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon=""></ion-back-button>
+        </ion-buttons>
+        <ion-title></ion-title>
+    </ion-toolbar>
+
+    <div class="header_banner d-flex animate__animated animate__fadeInUp">
+        <div class="text_box">
+            <h2 class="animate__animated animate__fadeInUp">{{'register' | translate}}</h2>
+            <h3 class="animate__animated animate__fadeInUp">{{'in_less_than_a_minute' | translate}}</h3>
+        </div>
+        <div class="banner_img end">
+            <img src="assets/images/register.png">
+        </div>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <div class="form animate__animated animate__fadeInUp">
+        <ion-list lines="none">
+            <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                <div class="item_inner">
+                    <ion-label>{{'full_name' | translate}}</ion-label>
+                    <ion-input mode="md" type="name" placeholder="{{'enter_full_name' | translate}}"></ion-input>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                <div class="item_inner">
+                    <ion-label>{{'email_address' | translate}}</ion-label>
+                    <ion-input mode="md" type="email" placeholder="{{'enter_email_address' | translate}}"></ion-input>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                <div class="item_inner">
+                    <ion-label>{{'phone_number' | translate}}</ion-label>
+                    <ion-input mode="md" type="number" placeholder="{{'enter_mobile_number' | translate}}"></ion-input>
+                </div>
+            </ion-item>
+
+            <h2 class="ion-text-center animate__animated animate__fadeInUp">{{'we_ll_send_verification_code' | translate}}.</h2>
+        </ion-list>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <ion-button size="large" class="btn animate__animated animate__fadeInUp" expand="round" (click)="verification()">{{'continue' | translate}}</ion-button>
+</ion-footer>

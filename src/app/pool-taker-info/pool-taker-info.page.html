@@ -1,0 +1,87 @@
+<ion-header class="bg_transparent">
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon=""></ion-back-button>
+        </ion-buttons>
+        <ion-title></ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen  (click)="dismiss()" id="content-inner" #contentElement>
+    <div  class="pooler_info animate__animated animate__fadeInUp" style="--animate-duration: .3s;">
+        <div class="pullup" (click)="dismiss()"></div>
+        <ion-card>
+            <div class="profile_about d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/profiles/5.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2 class="d-flex">
+                        <span class="name">Samantha Smith</span>
+                        <span class="end">$3.50</span>
+                    </h2>
+                    <h3 class="d-flex">
+                        <ion-icon class="zmdi zmdi-shield-check ion-text-start"></ion-icon>
+                        <span class="company_name">Bank of USA</span>
+                        <span class="seats_details end">
+                          <!-- <ion-icon class="zmdi zmdi-car ion-text-start"></ion-icon>
+                          <small></small> -->
+                          <span class="seats">
+                             1 {{'seat' | translate}}
+                          </span>
+                        </span>
+                    </h3>
+                </div>
+            </div>
+        </ion-card>
+
+        <ion-card class="riderRatingOtherCard">
+            <div class="riderRatingOther">
+                <ion-row>
+                    <ion-col size="5">
+                        <h2>{{'rating' | translate}}</h2>
+                        <h6 class="d-flex">
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                            4.5
+                        </h6>
+                    </ion-col>
+                    <ion-col size="4">
+                        <h2>{{'ride_with' | translate}}</h2>
+                        <h3>249 {{'people' | translate}}</h3>
+                    </ion-col>
+                    <ion-col size="3">
+                        <h2>{{'joinned' | translate}}</h2>
+                        <h3>{{'in' | translate}} 2019</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-card>
+
+        <ion-card class="vehicleInfoCard">
+            <div class="vehicle_info">
+                <div class="item">
+                    <h2>{{'hobbie' | translate}}</h2>
+                    <h3>Listeing Music, Travelling, Golf</h3>
+                </div>
+                <div class="item">
+                    <h2>{{'bio' | translate}}</h2>
+                    <h3>Jolly, Fun loving, Friendlay, Foodie</h3>
+                </div>
+
+            </div>
+        </ion-card>
+    </div>
+</ion-content>
+
+<!-- <div class="btn_box d-flex animate__animated animate__fadeInUp" style="--animate-duration: .3s;">
+    <div class="icon_box " (click)="conversation()">
+        <ion-icon class="zmdi zmdi-comment-alt-text"></ion-icon>
+    </div>
+    <div class="icon_box ride_cancel">
+        <ion-icon class="zmdi zmdi-close"></ion-icon>
+    </div>
+    <ion-button size="large" class="btn" expand="round" (click)="ride_accepted()">
+        <ion-icon class="zmdi zmdi-check ion-text-start"></ion-icon>
+        {{'accept' | translate}}
+    </ion-button>
+</div> -->

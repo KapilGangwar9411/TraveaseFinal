@@ -1,0 +1,76 @@
+<ion-header class="bg_transparent">
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon=""></ion-back-button>
+        </ion-buttons>
+        <ion-title></ion-title>
+    </ion-toolbar>
+
+    <div class="search_box animate__animated animate__zoomIn">
+        <ion-icon class=" search ion-text-start"></ion-icon>
+        <ion-searchbar class="ion-no-padding" searchIcon="hide" placeholder="{{'search_lcation' | translate}}">
+        </ion-searchbar>
+        <ion-icon class="zmdi zmdi-gps-dot end ion-text-end"></ion-icon>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <div class="map" (click)="toggleFab()">
+        <img src="assets/images/map.png">
+
+        <ion-icon class="zmdi zmdi-pin" style="top: 35%; right: 44%;"></ion-icon>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border" [ngClass]="fabAction ? 'active' : ''">
+    <div class="footer_content">
+        <div class="form">
+            <div class="address_title">
+                <ion-radio-group>
+                    <ion-row>
+                        <ion-col size="4">
+                            <ion-radio justify="space-between" alignment="center" label-placement="end" value="home">
+                                <ion-label>
+                                    <h2>{{'home' | translate}}</h2>
+                                </ion-label>
+                            </ion-radio>
+                        </ion-col>
+                        <ion-col size="4">
+                            <ion-radio justify="space-between" alignment="center" label-placement="end" value="office">
+                                <ion-label>
+                                    <h2>{{'office' | translate}}</h2>
+                                </ion-label>
+                            </ion-radio>
+                        </ion-col>
+                        <ion-col size="4">
+                            <ion-radio justify="space-between" alignment="center" label-placement="end" value="other">
+                                <ion-label>
+                                    <h2>{{'other' | translate}}</h2>
+                                </ion-label>
+                            </ion-radio>
+                        </ion-col>
+                    </ion-row>
+                </ion-radio-group>
+            </div>
+            <ion-list lines="none">
+                <div class="address d-flex">
+                    <ion-icon class="zmdi zmdi-pin"></ion-icon>
+
+                    <p>B121 - Galaxy Residency, Hemiltone Tower, New York, UAS.</p>
+                </div>
+                <ion-item lines="none">
+                    <div class="item_inner d-flex">
+                        <div class="input_box">
+                            <ion-label mode="md" position="stacked">{{"add_landark" | translate}}</ion-label>
+                            <ion-input mode="md" type="address"
+                                placeholder="{{'write_address_landmark' | translate}}"></ion-input>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-button size="large" class="btn" expand="round" (click)="save()">{{'save_address' |
+                    translate}}</ion-button>
+            </ion-list>
+        </div>
+    </div>
+</ion-footer>

@@ -1,0 +1,110 @@
+<ion-header class="bg_transparent">
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon=""></ion-back-button>
+        </ion-buttons>
+        <ion-title></ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+    <div class="map">
+        <img src="assets/images/map_2.png">
+        <div class="img_box center_img" style="top: 36%; right: 49%;">
+            <img src="assets/images/profiles/5.png">
+        </div>
+        <div class="img_box center_img" style="top: 17%; right: 29%;">
+            <img src="assets/images/profiles/4.png">
+        </div>
+    </div>
+
+
+    <div class="ride_info">
+        <h1 class="d-flex" id="trigger-button">{{'ride_starts_on' | translate}} 25 Jun, 10:30 am
+            <!-- <ion-icon class="zmdi zmdi-more-vert end ion-text-end"></ion-icon> -->
+        </h1>
+        <div class="form">
+            <ion-list lines="none">
+                <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                    <div class="item_inner d-flex">
+                        <ion-icon class="zmdi zmdi-circle ion-text-start"></ion-icon>
+                        <div class="input_box">
+                            <h2 class="d-flex">
+                                1024, Central Park, Hemiltone, New York
+                            </h2>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <div class="dotts">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                    <div class="item_inner d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <div class="input_box">
+                            <h2 class="d-flex">
+                                M141, NY Food Center, Williomson st, lllinois
+                            </h2>
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </div>
+    </div>
+
+
+
+    <div class="pooler_info animate__animated animate__fadeInUp" style="--animate-duration: .3s;">
+        <!-- <div class="pullup"></div> -->
+        <ion-card>
+            <div class="co_passengers">
+                <h2>{{'co_passengers' | translate}}</h2>
+                <div class="scroll-x">
+                    <div class="scroll-item ion-text-center active">
+                        <div class="img_box center_img">
+                            <img src="assets/images/profiles/5.png" class="crop_img">
+                        </div>
+                        <h3>Samantha<br>Smith</h3>
+                    </div>
+
+                    <div class="scroll-item ion-text-center active">
+                        <div class="img_box center_img">
+                            <img src="assets/images/profiles/2.png" class="crop_img">
+                        </div>
+                        <h3>Peter<br>Toylor</h3>
+                    </div>
+                    <div class="scroll-item ion-text-center active">
+                        <div class="img_box center_img">
+                            <img src="assets/images/profiles/1.png" class="crop_img">
+                            <!-- <ion-icon class="zmdi zmdi-account-circle ion-text-center"></ion-icon> -->
+                        </div>
+                        <h3>Emili<br>Williomson</h3>
+                    </div>
+                    <div class="scroll-item ion-text-center active">
+                        <div class="img_box center_img">
+                            <img src="assets/images/profiles/7.png" class="crop_img">
+                            <!-- <ion-icon class="zmdi zmdi-account-circle ion-text-center"></ion-icon> -->
+                        </div>
+                        <!-- <h3>{{'empty' | translate}}<br>{{'seat' | translate}}</h3> -->
+                        <h3>Josh<br>Haydon</h3>
+                    </div>
+                </div>
+            </div>
+        </ion-card>
+    </div>
+</ion-content>
+
+<div class="btn_box d-flex animate__animated animate__fadeInUp" style="--animate-duration: .3s;">
+    <!-- <div class="icon_box" (click)="conversation()">
+      <ion-icon class="zmdi zmdi-comment-alt-text"></ion-icon>
+  </div> -->
+    <ion-button size="large" class="btn" expand="round" (click)="rideRoute()">
+        {{'start_rider' | translate}}
+    </ion-button>
+    <!-- <ion-button size="large" class="btn" expand="round"> 
+    {{'start_rider' | translate}}
+</ion-button> -->
+</div>

@@ -1,0 +1,266 @@
+<ion-header class="bg_transparent">
+    <ion-toolbar>
+        <ion-title></ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+    <div class="map-container">
+        <div #map id="map" class="mapbox-map"></div>
+
+        <!-- Map Controls -->
+        <div class="map-controls">
+            <ion-button fill="clear" (click)="clearMap()">
+                <ion-icon name="refresh-outline"></ion-icon>
+            </ion-button>
+        </div>
+
+        <!-- Location Button -->
+        <div class="map-controls">
+            <ion-button (click)="centerOnUserLocation()" class="location-button">
+                <ion-icon name="locate-outline"></ion-icon>
+            </ion-button>
+        </div>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+
+    <ion-modal trigger="open-modal">
+        <ng-template>
+            <ion-content>
+                <ion-datetime mode="md" #datetime [value]="dateValue" size="cover"
+                    (ionChange)="dateChanged(datetime.value)">
+                    <!-- <div slot="title">My Custom Title</div> -->
+                    <ion-buttons slot="buttons">
+                        <ion-button (click)="close()">{{'cancel' | translate}}</ion-button>
+                        <ion-button (click)="select()">{{'okay' | translate}}</ion-button>
+                    </ion-buttons>
+                </ion-datetime>
+            </ion-content>
+        </ng-template>
+    </ion-modal>
+
+    <ion-modal trigger="open-modal2">
+        <ng-template>
+            <ion-content>
+                <ion-datetime mode="md" #datetime [value]="dateValue" size="cover"
+                    (ionChange)="dateChanged(datetime.value)">
+                    <!-- <div slot="title">My Custom Title</div> -->
+                    <ion-buttons slot="buttons">
+                        <ion-button (click)="close()">{{'cancel' | translate}}</ion-button>
+                        <ion-button (click)="select()">{{'okay' | translate}}</ion-button>
+                    </ion-buttons>
+                </ion-datetime>
+            </ion-content>
+        </ng-template>
+    </ion-modal>
+    <ion-icon class="zmdi zmdi-gps-dot"></ion-icon>
+
+    <div class="footer_inner">
+        <ion-segment mode="ios" [(ngModel)]="segment" (ionChange)="onSegmentChange($event)">
+            <ion-segment-button mode="ios" value="0">
+                <ion-label>
+                    <ion-icon class="zmdi zmdi-car ion-text-start"></ion-icon>
+                    <span>{{'find_pool' | translate}}</span>
+                </ion-label>
+            </ion-segment-button>
+            <ion-segment-button mode="ios" value="1">
+                <ion-label>
+                    <ion-icon class="zmdi zmdi-nature-people ion-text-start"></ion-icon>
+                    <span>{{'offer_pool' | translate}}</span>
+                </ion-label>
+            </ion-segment-button>
+        </ion-segment>
+
+        <div class="tab_content">
+            <swiper-container class="swiper-container" id="swiper1" (swiperslidechange)="onSlideChange($event)">
+                <!--  Find pool section start -->
+                <div class="swiper-slide">
+                    <div class="form animate__animated animate__fadeInUp">
+                        <ion-list lines="none">
+                            <div class="dotts">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <ion-item class="animate__animated animate__fadeInUp" lines="none"
+                                (click)="select_location(true)">
+                                <div class="item_inner d-flex">
+                                    <ion-icon class="zmdi zmdi-circle ion-text-start"></ion-icon>
+                                    <div class="input_box">
+                                        <ion-input
+                                            placeholder="{{'enter_pickup_location' | translate}}"
+                                            [(ngModel)]="sourceLocation"
+                                            (ionChange)="searchLocation(sourceLocation, true)"
+                                            readonly
+                                        ></ion-input>
+                                    </div>
+                                </div>
+                            </ion-item>
+                            <ion-item class="animate__animated animate__fadeInUp" lines="none"
+                                (click)="select_location(false)">
+                                <div class="item_inner d-flex">
+                                    <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                                    <div class="input_box">
+                                        <ion-input
+                                            placeholder="{{'enter_drop_location' | translate}}"
+                                            [(ngModel)]="destinationLocation"
+                                            (ionChange)="searchLocation(destinationLocation, false)"
+                                            readonly
+                                        ></ion-input>
+                                    </div>
+                                </div>
+                            </ion-item>
+
+                            <ion-row>
+                                <ion-col col-6>
+                                    <ion-item class="animate__animated animate__fadeInUp" lines="none" id="open-modal">
+                                        <div class="item_inner d-flex">
+                                            <ion-icon class="zmdi zmdi-calendar-alt ion-text-start"></ion-icon>
+                                            <div class="input_box">
+                                                <h2> {{ formattedString }}</h2>
+                                            </div>
+                                        </div>
+                                    </ion-item>
+                                </ion-col>
+                                <ion-col col-6>
+                                    <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                                        <ion-label style="display: none;">{{'select_seat' | translate}}</ion-label>
+                                        <div class="item_inner d-flex">
+                                            <ion-icon class="zmdi zmdi-car ion-text-start"></ion-icon>
+                                            <div class="input_box d-flex">
+                                                <ion-select style="min-width: fit-content;" [(ngModel)]="select_seat"
+                                                    placeholder="{{'select_seat' | translate}}"
+                                                    label="{{'select_seat' | translate}}" label-placement="stacked"
+                                                    toggleIcon="caret-down-sharp" [okText]="'okay' | translate"
+                                                    [cancelText]="'cancel' | translate">
+                                                    <ion-select-option value="1">1 {{'seat' |
+                                                        translate}}</ion-select-option>
+                                                    <ion-select-option value="2">2 {{'seat' |
+                                                        translate}}</ion-select-option>
+                                                    <ion-select-option value="3">3 {{'seat' |
+                                                        translate}}</ion-select-option>
+                                                    <ion-select-option value="4">4 {{'seat' |
+                                                        translate}}</ion-select-option>
+                                                    <ion-select-option value="5">5 {{'seat' |
+                                                        translate}}</ion-select-option>
+                                                </ion-select>
+                                            </div>
+                                        </div>
+                                    </ion-item>
+                                </ion-col>
+                            </ion-row>
+
+                            <ion-button size="large" class="btn animate__animated animate__fadeInUp"
+                                style="--animate-duration: .4s;" expand="round" (click)="listOfPooler()">
+                                {{'find_pool' | translate}}
+                            </ion-button>
+                        </ion-list>
+                    </div>
+                </div>
+                <!--  Find pool section end -->
+
+                <!--  Offer pool section start -->
+                <div class="swiper-slide">
+                    <div class="form animate__animated animate__fadeInUp">
+                        <ion-list lines="none">
+                            <div class="dotts">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <ion-item class="animate__animated animate__fadeInUp" lines="none"
+                                (click)="select_location(true)">
+                                <div class="item_inner d-flex">
+                                    <ion-icon class="zmdi zmdi-circle ion-text-start"></ion-icon>
+                                    <div class="input_box">
+                                        <ion-input
+                                            placeholder="{{'enter_pickup_location' | translate}}"
+                                            [(ngModel)]="sourceLocation"
+                                            (ionChange)="searchLocation(sourceLocation, true)"
+                                            readonly
+                                        ></ion-input>
+                                    </div>
+                                </div>
+                            </ion-item>
+                            <ion-item class="animate__animated animate__fadeInUp" lines="none"
+                                (click)="select_location(false)">
+                                <div class="item_inner d-flex">
+                                    <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                                    <div class="input_box">
+                                        <ion-input
+                                            placeholder="{{'enter_drop_location' | translate}}"
+                                            [(ngModel)]="destinationLocation"
+                                            (ionChange)="searchLocation(destinationLocation, false)"
+                                            readonly
+                                        ></ion-input>
+                                    </div>
+                                </div>
+                            </ion-item>
+
+                            <ion-row>
+                                <ion-col col-6>
+                                    <ion-item class="animate__animated animate__fadeInUp" lines="none" id="open-modal2">
+                                        <div class="item_inner d-flex">
+                                            <ion-icon class="zmdi zmdi-calendar-alt ion-text-start"></ion-icon>
+                                            <div class="input_box">
+                                                <h2> {{ formattedString }}</h2>
+                                            </div>
+                                        </div>
+                                    </ion-item>
+                                </ion-col>
+                                <ion-col col-6>
+                                    <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                                        <ion-label style="display: none;">{{'select_vehicle' |
+                                            translate}}</ion-label>
+                                        <div class="item_inner d-flex">
+                                            <ion-icon class="zmdi zmdi-car ion-text-start"></ion-icon>
+                                            <div class="input_box d-flex">
+                                                <ion-select style="min-width: fit-content;" [(ngModel)]="select_vehicle"
+                                                    placeholder="{{'select_vehicle' | translate}}"
+                                                    label="{{'select_vehicle' | translate}}" label-placement="stacked"
+                                                    toggleIcon="caret-down-sharp" [okText]="'okay' | translate"
+                                                    [cancelText]="'cancel' | translate">
+                                                    <ion-select-option value="1">Hatchbacks</ion-select-option>
+                                                    <ion-select-option value="2">Sedan</ion-select-option>
+                                                    <ion-select-option value="3">SUV</ion-select-option>
+                                                    <ion-select-option value="4">MUV</ion-select-option>
+                                                    <ion-select-option value="5">Coupe</ion-select-option>
+                                                    <ion-select-option value="6">Convertibles</ion-select-option>
+                                                    <ion-select-option value="7">Toyotal Matrix</ion-select-option>
+                                                </ion-select>
+                                            </div>
+                                        </div>
+                                    </ion-item>
+                                </ion-col>
+                            </ion-row>
+
+                            <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                                <div class="item_inner d-flex">
+                                    <ion-icon class="zmdi zmdi-money-box ion-text-start"></ion-icon>
+                                    <div class="input_box">
+                                        <ion-input
+                                            mode="md"
+                                            type="number"
+                                            placeholder="{{'set_price_per_seat' | translate}}"
+                                            [(ngModel)]="pricePerSeat">
+                                        </ion-input>
+                                    </div>
+                                </div>
+                            </ion-item>
+
+                            <ion-button size="large" class="btn animate__animated animate__fadeInUp"
+                                style="--animate-duration: .4s;" expand="round" (click)="poolTakers()">
+                                {{'offer_pool' | translate}}
+                            </ion-button>
+                        </ion-list>
+                    </div>
+                </div>
+                <!--  Offer pool section end -->
+            </swiper-container>
+        </div>
+    </div>
+</ion-footer>

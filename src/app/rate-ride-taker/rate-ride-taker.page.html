@@ -1,0 +1,81 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title></ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color">
+    <ion-card class="ion-text-center">
+        <img src="assets/images/tripcomplete.png">
+        <h1>{{'trip_completed' | translate}}</h1>
+        <p>{{'you_have_earned' | translate}} <strong>$34.50</strong> <br> {{'from_this_trip' | translate}}.</p>
+    </ion-card>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <ion-list lines="none">
+        <ion-item class="animate__animated animate__fadeInUp">
+            <ion-label slot="start">
+                <h2>{{'rate_ride_taker' | translate}}</h2>
+                <h3 class="d-flex">
+                    Samantha Smith
+                </h3>
+                <div class="icon_box">
+                    <span [ngClass]="ratingIcon1 ? 'icon_box active' : 'icon_box'" (click)="toggleRatingIcon1()">
+                      <ion-icon class="zmdi zmdi-star"></ion-icon>
+                  </span>
+                    <span [ngClass]="ratingIcon2 ? 'icon_box active' : 'icon_box'" (click)="toggleRatingIcon2()">
+                      <ion-icon class="zmdi zmdi-star"></ion-icon>
+                  </span>
+                    <span [ngClass]="ratingIcon3 ? 'icon_box active' : 'icon_box'" (click)="toggleRatingIcon3()">
+                      <ion-icon class="zmdi zmdi-star"></ion-icon>
+                  </span>
+                    <span [ngClass]="ratingIcon4 ? 'icon_box active' : 'icon_box'" (click)="toggleRatingIcon4()">
+                      <ion-icon class="zmdi zmdi-star"></ion-icon>
+                  </span>
+                    <span [ngClass]="ratingIcon5 ? 'icon_box active' : 'icon_box'" (click)="toggleRatingIcon5()">
+                      <ion-icon class="zmdi zmdi-star"></ion-icon>
+                  </span>
+                </div>
+            </ion-label>
+            <div class="img_box center_img" slot="end">
+                <img src="assets/images/profiles/5.png" class="crop_img">
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <ion-label slot="start">
+                <h2>{{'rate_ride_taker' | translate}}</h2>
+                <h3 class="d-flex">
+                    Peter Taylor
+                </h3>
+                <div class="icon_box">
+                    <span [ngClass]="ratingIcon6 ? 'icon_box active' : 'icon_box'" (click)="toggleRatingIcon6()">
+                      <ion-icon class="zmdi zmdi-star"></ion-icon>
+                  </span>
+                    <span [ngClass]="ratingIcon7 ? 'icon_box active' : 'icon_box'" (click)="toggleRatingIcon7()">
+                      <ion-icon class="zmdi zmdi-star"></ion-icon>
+                  </span>
+                    <span [ngClass]="ratingIcon8 ? 'icon_box active' : 'icon_box'" (click)="toggleRatingIcon8()">
+                      <ion-icon class="zmdi zmdi-star"></ion-icon>
+                  </span>
+                    <span [ngClass]="ratingIcon9 ? 'icon_box active' : 'icon_box'" (click)="toggleRatingIcon9()">
+                      <ion-icon class="zmdi zmdi-star"></ion-icon>
+                  </span>
+                    <span [ngClass]="ratingIcon10 ? 'icon_box active' : 'icon_box'" (click)="toggleRatingIcon10()">
+                      <ion-icon class="zmdi zmdi-star"></ion-icon>
+                  </span>
+                </div>
+            </ion-label>
+            <div class="img_box center_img" slot="end">
+                <img src="assets/images/profiles/4.png" class="crop_img">
+            </div>
+        </ion-item>
+    </ion-list>
+
+    <div class="btn_box d-flex animate__animated animate__fadeInUp" style="--animate-duration: .3s;">
+        <ion-button size="large" class="btn" expand="round" (click)="tabs()">
+            {{'submit' | translate}}
+        </ion-button>
+    </div>
+</ion-footer>

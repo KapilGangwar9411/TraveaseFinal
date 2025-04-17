@@ -1,0 +1,2 @@
+alias: gopool_ionic
+password: gopool_ionic

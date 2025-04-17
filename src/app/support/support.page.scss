@@ -1,0 +1,94 @@
+ion-header {
+    .header_banner {
+        --animate-duration: .2s;
+        .banner_img {
+            img {
+                max-width: 160px;
+                min-width: 160px;
+            }
+        }
+    }
+}
+
+ion-content{
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+}
+
+ion-list {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    ion-row {
+        align-items: center;
+        align-items: center;
+        min-height: 77px;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 1px;
+            height: 32px;
+            background: var(--white);
+        }
+        ion-col {
+            h2 {
+                color: var(--white);
+                font-size: 1rem;
+                letter-spacing: 0.5px;
+                margin: 0 auto;
+                width: fit-content;
+                font-weight: 400;
+                ion-icon {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+    .form {
+        background: var(--white);
+        border-radius: 20px 20px 0 0;
+        padding-top: 20px;
+        --animate-duration: .25s;
+        .text_box {
+            width: 100%;
+            padding-top: 17px;
+            h2 {
+                margin: 0;
+                color: var(--text-dark);
+                font-size: 1.5rem;
+                font-weight: 500;
+                letter-spacing: 0;
+                padding-bottom: 8px;
+            }
+            h3 {
+                margin: 0;
+                color: var(--text-light);
+                font-size: 0.93rem;
+                letter-spacing: 0.4px;
+                padding: 0;
+                padding-bottom: 35px;
+            }
+        }
+        ion-item {
+            margin-bottom: 30px;
+            ion-textarea {
+                max-height: 100px;
+                overflow-y: auto;
+            }
+        }
+    }
+}
+
+ion-footer {
+    background: var(--white);
+    padding: 0 20px 20px 20px;
+    ion-button {
+        --animate-duration: .4s !important;
+    }
+}

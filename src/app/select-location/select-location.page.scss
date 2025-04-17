@@ -1,0 +1,158 @@
+ion-header {
+    background: var(--white) !important;
+    ion-toolbar ion-title {
+        font-size: 1.15rem !important;
+        padding: 0 12px !important;
+    }
+}
+
+.search_box {
+    margin: 0 auto;
+    width: calc(100% - 40px);
+    border-bottom: 1px solid rgba(204, 204, 204, 0.6) !important;
+    ion-icon {
+        font-size: 1.4rem;
+        color: var(--text-dark);
+        min-width: 25px;
+        padding: 0 2px;
+    }
+}
+
+ion-list {
+    margin: 0;
+    background: none;
+    padding: 0;
+    padding-top: 14px;
+    ion-item {
+        --inner-padding-end: 0px;
+        --inner-min-height: unset !important;
+        --min-height: unset !important;
+        --padding-start: 0;
+        --background: var(--transparent) !important;
+        background: var(--none);
+        padding: 10px 20px;
+        .item_inner {
+            width: 100%;
+            align-items: flex-start;
+            ion-icon {
+                color: var(--text-light2);
+                font-size: 1.15rem;
+                min-width: 33px;
+                padding: 0 3px;
+            }
+            .text_box {
+                width: 100%;
+                h2 {
+                    margin: 0;
+                    color: var(--text-dark);
+                    font-size: 1rem;
+                    letter-spacing: .5px;
+                    padding-bottom: 6px;
+                }
+                h3 {
+                    margin: 0;
+                    color: var(--text-light2);
+                    font-size: 0.87rem;
+                    font-weight: 400;
+                    line-height: 23px;
+                }
+            }
+        }
+        &.pin_on_map {
+            .item_inner {
+                ion-icon {
+                    color: var(--primary);
+                }
+                .text_box {
+                    width: 100%;
+                    h2 {
+                        color: var(--primary);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Loading spinner container
+.loading-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+
+    ion-spinner {
+        --color: var(--primary);
+        width: 40px;
+        height: 40px;
+    }
+}
+
+// Recent locations divider
+.recent-divider {
+    background: transparent;
+    font-size: 0.85rem;
+    color: var(--text-light2);
+    --padding-start: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+// No results message
+.no-results {
+    text-align: center;
+    padding: 30px 20px;
+
+    .w-100 {
+        width: 100%;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .no-results-icon {
+        font-size: 3rem;
+        color: var(--text-light2);
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: var(--text-light2);
+        font-size: 0.95rem;
+        margin: 10px 0 0;
+    }
+}
+
+// Location status indicator
+.location-status {
+    background-color: rgba(255, 193, 7, 0.1);
+    color: var(--ion-color-warning);
+    padding: 8px 12px;
+    margin: 10px 20px 0;
+    border-radius: 4px;
+    border: 1px solid var(--ion-color-warning);
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+
+    ion-icon {
+        margin-right: 8px;
+        font-size: 1.1rem;
+    }
+
+    span {
+        flex: 1;
+    }
+
+    ion-button {
+        margin: 0;
+        --color: var(--ion-color-warning);
+        font-weight: 500;
+        text-transform: none;
+        font-size: 0.8rem;
+
+        &::part(native) {
+            padding: 0;
+        }
+    }
+}

@@ -1,0 +1,101 @@
+.logo {
+    padding: 0 20px;
+    margin: auto;
+    width: 155px;
+    margin-bottom: 10px;
+    img {
+        display: block;
+        margin: auto;
+    }
+}
+
+.banner {
+    padding: 0 20px;
+    margin: auto;
+    width: 100%;
+    margin-bottom: 0px;
+    img {
+        max-width: 300px;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.animate__animated.animate__zoomInUp {
+    --animate-duration: .15s !important;
+}
+
+ion-footer {
+    position: absolute;
+    bottom: 0;
+    background: var(--white);
+    overflow-y: auto;
+    border-radius: 18px 18px 0 0;
+    padding-top: 25px;
+    min-height: calc(100vh - 380px);
+    max-height: calc(100vh - 380px);
+    --animate-duration: .2s !important;
+    .form {
+        h2 {
+            margin: 0;
+            color: var(--text-light);
+            font-size: 1rem;
+            letter-spacing: .4px;
+            padding: 0;
+            padding-bottom: 26px;
+        }
+        ion-list {
+            margin-bottom: 8px;
+            ion-item {
+                margin-bottom: 20px;
+            }
+        }
+        .button.btn {
+            --animate-duration: .25s !important;
+        }
+    }
+    .social_login {
+        width: 100%;
+        position: relative;
+        --animate-duration: .3s !important;
+        h3 {
+            margin: 0;
+            color: var(--text-light);
+            font-size: 1rem;
+            letter-spacing: 0.4px;
+            padding: 25px 0 108px 0;
+        }
+        .button_container {
+            width: 100%;
+            background: var(--primary);
+            min-height: 89px;
+            border-radius: 18px 18px 0 0;
+            position: absolute;
+            bottom: 0;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                width: 1px;
+                height: 36px;
+                background: var(--white);
+            }
+            ion-row {
+                width: 100%;
+                ion-col {
+                    padding: 0;
+                }
+            }
+            .btn {
+                letter-spacing: 0 !important;
+                font-weight: 400;
+                text-transform: unset !important;
+                font-size: .95rem;
+            }
+        }
+    }
+}

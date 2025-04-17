@@ -1,0 +1,103 @@
+ion-header {
+    .header_banner {
+        --animate-duration: .2s;
+        .text_box {
+            padding-top: 20px;
+        }
+        .banner_img {
+            img {
+                max-width: 120px;
+                min-width: 120px;
+            }
+        }
+    }
+}
+
+ion-list {
+    margin: 0;
+    padding: 0;
+    background: var(--primary);
+    border-radius: 20px 20px 0 0;
+    min-height: calc(100vh - 200px);
+    max-height: calc(100vh - 200px);
+    --animate-duration: .2s;
+    ion-row {
+        align-items: center;
+        align-items: center;
+        min-height: 77px;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 1px;
+            height: 32px;
+            background: var(--white);
+        }
+        ion-col {
+            h2 {
+                color: var(--white);
+                font-size: 1rem;
+                letter-spacing: 0.5px;
+                margin: 0 auto;
+                width: fit-content;
+                font-weight: 400;
+                ion-icon {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+    .transaction_list {
+        background: var(--white);
+        border-radius: 20px 20px 0 0;
+        padding-top: 10px;
+        min-height: calc(100vh - 200px - 77px);
+        max-height: calc(100vh - 200px - 77px);
+        --animate-duration: .25s;
+        overflow-y: auto;
+        ion-item {
+            --inner-padding-end: 0px;
+            --inner-min-height: unset !important;
+            --min-height: unset !important;
+            --padding-start: 0;
+            --background: var(--transparent) !important;
+            background: var(--none);
+            padding: 13px 20px;
+            .item_inner {
+                width: 100%;
+                h2 {
+                    margin: 0;
+                    color: var(--text-dark);
+                    font-size: 1rem;
+                    letter-spacing: .5px;
+                    padding-bottom: 6px;
+                    span {
+                        color: #F22323;
+                    }
+                }
+                h3 {
+                    margin: 0;
+                    color: var(--text-light2);
+                    font-size: 0.87rem;
+                    font-weight: 400;
+                    line-height: 23px;
+                }
+            }
+            &.added_to_wallet {
+                .item_inner {
+                    h2 {
+                        span {
+                            color: #99C45D;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

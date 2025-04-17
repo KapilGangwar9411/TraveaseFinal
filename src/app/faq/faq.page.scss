@@ -1,0 +1,79 @@
+ion-header {
+    .header_banner {
+        --animate-duration: .2s;
+        .banner_img {
+            img {
+                max-width: 165px;
+                min-width: 165px;
+            }
+        }
+    }
+}
+
+ion-list {
+    margin: 0;
+    padding: 0;
+    background: var(--white);
+    border-radius: 20px 20px 0 0;
+    min-height: calc(100vh - 178.92px);
+    max-height: calc(100vh - 178.92px);
+    --animate-duration: .2s;
+    padding: 27px 20px 0px 20px;
+    overflow: hidden;
+    overflow-y: auto;
+    ion-item {
+        padding: 0;
+        --inner-padding-end: 0px;
+        --inner-min-height: unset !important;
+        --padding-start: 0;
+        --background: var(--transparent) !important;
+        --min-height: unset;
+        margin: 0 auto;
+        padding-bottom: 6px;
+        .item-inner {
+            width: 100%;
+            h2 {
+                margin: 0;
+                color: var(--text-dark);
+                align-items: flex-start;
+                font-size: 1rem;
+                padding-bottom: 14px;
+                letter-spacing: .5px;
+                ion-icon {
+                    color: var(--text-light2);
+                    font-size: 1.4rem;
+                    min-width: fit-content;
+                    width: 14px;
+                    transition: all 0.3s;
+                }
+            }
+            .text_box {
+                width: 100%;
+                max-height: 0;
+                overflow: hidden;
+                transition: all .5s;
+                overflow: hidden;
+                p {
+                    margin: 0;
+                    color: var(--text-dark);
+                    padding-bottom: 20px;
+                    font-size: 0.98rem;
+                    line-height: 24px;
+                }
+            }
+        }
+        &.active {
+            .item-inner {
+                h2 {
+                    ion-icon {
+                        transform: rotate(180deg);
+                    }
+                }
+                .text_box {
+                    max-height: 100vh;
+                    overflow-y: auto;
+                }
+            }
+        }
+    }
+}

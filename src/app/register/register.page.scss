@@ -1,0 +1,26 @@
+.form {
+    background: var(--white);
+    border-radius: 20px 20px 0 0;
+    min-height: calc(100vh - 182px - 76px);
+    padding-top: 34px;
+    --animate-duration: .2s !important;
+    h2 {
+        margin: 0;
+        color: var(--text-light);
+        font-size: 1rem;
+        letter-spacing: 0.4px;
+        padding: 0px 0 0px 0;
+    }
+}
+
+.header_banner {
+    --animate-duration: .2s;
+}
+
+ion-footer {
+    background: var(--white);
+    padding: 0 20px 20px 20px;
+    ion-button {
+        --animate-duration: .4s !important;
+    }
+}

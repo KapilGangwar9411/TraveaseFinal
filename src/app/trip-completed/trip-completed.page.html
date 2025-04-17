@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title></ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color">
+    <ion-card class="ion-text-center">
+        <img src="assets/images/tripcomplete.png">
+        <h1>{{'trip_completed' | translate}}</h1>
+        <p>{{'hope_you_had_a_great' | translate}} <br> {{'car_pooling_experience' | translate}}.</p>
+    </ion-card>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <ion-list lines="none">
+        <ion-item class="animate__animated animate__fadeInUp">
+            <ion-label slot="start">
+                <h2>{{'rate_rider' | translate}}</h2>
+                <h3 class="d-flex">
+                    Samantha Smith
+                </h3>
+                <div class="icon_box">
+                    <span [ngClass]="ratingIcon1 ? 'icon_box active' : 'icon_box'" (click)="toggleRatingIcon1()">
+                    <ion-icon class="zmdi zmdi-star"></ion-icon>
+                </span>
+                    <span [ngClass]="ratingIcon2 ? 'icon_box active' : 'icon_box'" (click)="toggleRatingIcon2()">
+                    <ion-icon class="zmdi zmdi-star"></ion-icon>
+                </span>
+                    <span [ngClass]="ratingIcon3 ? 'icon_box active' : 'icon_box'" (click)="toggleRatingIcon3()">
+                    <ion-icon class="zmdi zmdi-star"></ion-icon>
+                </span>
+                    <span [ngClass]="ratingIcon4 ? 'icon_box active' : 'icon_box'" (click)="toggleRatingIcon4()">
+                    <ion-icon class="zmdi zmdi-star"></ion-icon>
+                </span>
+                    <span [ngClass]="ratingIcon5 ? 'icon_box active' : 'icon_box'" (click)="toggleRatingIcon5()">
+                    <ion-icon class="zmdi zmdi-star"></ion-icon>
+                </span>
+                </div>
+            </ion-label>
+            <div class="img_box center_img" slot="end">
+                <img src="assets/images/profiles/5.png" class="crop_img">
+            </div>
+        </ion-item>
+    </ion-list>
+
+    <div class="btn_box  animate__animated animate__fadeInUp" style="--animate-duration: .3s;">
+        <h2 class="d-flex">{{'amount_to_pay' | translate}} <span class="end">$24.00</span></h2>
+        <ion-button size="large" class="btn" expand="round" (click)="tabs()">
+            {{'submit_pay' | translate}}
+        </ion-button>
+    </div>
+</ion-footer>

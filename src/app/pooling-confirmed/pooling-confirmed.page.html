@@ -1,0 +1,17 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title></ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <ion-card class="ion-text-center">
+        <img src="assets/images/confirmed.png">
+        <h1>{{'congratulations' | translate}}</h1>
+        <p innerHTML="{{'your_car_pooling_has_been_confiemed' | translate}}"></p>
+    </ion-card>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <ion-button size="large" class="btn animate__animated animate__fadeInUp" expand="round" (click)="my_trips()">{{'my_trips' | translate}}</ion-button>
+</ion-footer>

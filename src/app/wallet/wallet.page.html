@@ -1,0 +1,299 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon=""></ion-back-button>
+        </ion-buttons>
+        <ion-title></ion-title>
+    </ion-toolbar>
+
+    <div class="header_banner d-flex">
+        <div class="text_box">
+            <h2 class="d-flex">$159.50</h2>
+            <h3>{{'available_balance' | translate}}</h3>
+        </div>
+        <div class="banner_img end">
+            <img src="assets/images/verification.png">
+        </div>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <ion-list lines="none">
+
+        <ion-row>
+            <ion-col size="6" class="animate__animated animate__zooInUp" (click)="add_money()">
+                <h2 class="d-flex">
+                    <ion-icon class="zmdi zmdi-long-arrow-down"></ion-icon>&nbsp;&nbsp; {{'add_money' | translate}}
+                </h2>
+            </ion-col>
+
+            <ion-col size="6" class="animate__animated animate__zooInUp" (click)="send_to_bank()">
+                <h2 class="d-flex">
+                    <ion-icon class="zmdi zmdi-long-arrow-up"></ion-icon>&nbsp;&nbsp; {{'send_to_bank' | translate}}
+                </h2>
+            </ion-col>
+        </ion-row>
+
+        <div class="transaction_list">
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Paid to Rider <span class="end">$24.00</span></h2>
+                    <h3 class="d-flex">Emili Anderson <span class="end">21 Jun, 11:02 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="added_to_wallet animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Added to Wallet <span class="end">$200.00</span></h2>
+                    <h3 class="d-flex">Bank of USA <span class="end">20 Jun, 11:00 am</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="added_to_wallet animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Reveice form Ride Taker <span class="end">$10.00</span></h2>
+                    <h3 class="d-flex">Emili Anderson<span class="end">13 Jun,02:32 pm</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Sent to Bank <span class="end">$50.00</span></h2>
+                    <h3 class="d-flex">Bank of USA <span class="end">01 Jun, 10:02 am</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Paid to Rider <span class="end">$18.00</span></h2>
+                    <h3 class="d-flex">Linda Hemiltone <span class="end">26 May, 11:02 am</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="added_to_wallet animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Added to Wallet <span class="end">$100.00</span></h2>
+                    <h3 class="d-flex">Emilil Anderson <span class="end">21 May, 11:02 am</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Paid to Rider <span class="end">$24.00</span></h2>
+                    <h3 class="d-flex">Emili Anderson <span class="end">21 Jun, 11:02 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="added_to_wallet animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Added to Wallet <span class="end">$200.00</span></h2>
+                    <h3 class="d-flex">Bank of USA <span class="end">20 Jun, 11:00 am</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="added_to_wallet animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Reveice form Ride Taker <span class="end">$10.00</span></h2>
+                    <h3 class="d-flex">Emili Anderson<span class="end">13 Jun,02:32 pm</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Sent to Bank <span class="end">$50.00</span></h2>
+                    <h3 class="d-flex">Bank of USA <span class="end">01 Jun, 10:02 am</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Paid to Rider <span class="end">$18.00</span></h2>
+                    <h3 class="d-flex">Linda Hemiltone <span class="end">26 May, 11:02 am</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="added_to_wallet animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Added to Wallet <span class="end">$100.00</span></h2>
+                    <h3 class="d-flex">Emilil Anderson <span class="end">21 May, 11:02 am</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Paid to Rider <span class="end">$24.00</span></h2>
+                    <h3 class="d-flex">Emili Anderson <span class="end">21 Jun, 11:02 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="added_to_wallet animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Added to Wallet <span class="end">$200.00</span></h2>
+                    <h3 class="d-flex">Bank of USA <span class="end">20 Jun, 11:00 am</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="added_to_wallet animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Reveice form Ride Taker <span class="end">$10.00</span></h2>
+                    <h3 class="d-flex">Emili Anderson<span class="end">13 Jun,02:32 pm</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Sent to Bank <span class="end">$50.00</span></h2>
+                    <h3 class="d-flex">Bank of USA <span class="end">01 Jun, 10:02 am</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Paid to Rider <span class="end">$18.00</span></h2>
+                    <h3 class="d-flex">Linda Hemiltone <span class="end">26 May, 11:02 am</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="added_to_wallet animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Added to Wallet <span class="end">$100.00</span></h2>
+                    <h3 class="d-flex">Emilil Anderson <span class="end">21 May, 11:02 am</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Paid to Rider <span class="end">$24.00</span></h2>
+                    <h3 class="d-flex">Emili Anderson <span class="end">21 Jun, 11:02 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="added_to_wallet animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Added to Wallet <span class="end">$200.00</span></h2>
+                    <h3 class="d-flex">Bank of USA <span class="end">20 Jun, 11:00 am</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="added_to_wallet animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Reveice form Ride Taker <span class="end">$10.00</span></h2>
+                    <h3 class="d-flex">Emili Anderson<span class="end">13 Jun,02:32 pm</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Sent to Bank <span class="end">$50.00</span></h2>
+                    <h3 class="d-flex">Bank of USA <span class="end">01 Jun, 10:02 am</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Paid to Rider <span class="end">$18.00</span></h2>
+                    <h3 class="d-flex">Linda Hemiltone <span class="end">26 May, 11:02 am</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="added_to_wallet animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Added to Wallet <span class="end">$100.00</span></h2>
+                    <h3 class="d-flex">Emilil Anderson <span class="end">21 May, 11:02 am</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Paid to Rider <span class="end">$24.00</span></h2>
+                    <h3 class="d-flex">Emili Anderson <span class="end">21 Jun, 11:02 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="added_to_wallet animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Added to Wallet <span class="end">$200.00</span></h2>
+                    <h3 class="d-flex">Bank of USA <span class="end">20 Jun, 11:00 am</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="added_to_wallet animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Reveice form Ride Taker <span class="end">$10.00</span></h2>
+                    <h3 class="d-flex">Emili Anderson<span class="end">13 Jun,02:32 pm</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Sent to Bank <span class="end">$50.00</span></h2>
+                    <h3 class="d-flex">Bank of USA <span class="end">01 Jun, 10:02 am</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Paid to Rider <span class="end">$18.00</span></h2>
+                    <h3 class="d-flex">Linda Hemiltone <span class="end">26 May, 11:02 am</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="added_to_wallet animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Added to Wallet <span class="end">$100.00</span></h2>
+                    <h3 class="d-flex">Emilil Anderson <span class="end">21 May, 11:02 am</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Paid to Rider <span class="end">$24.00</span></h2>
+                    <h3 class="d-flex">Emili Anderson <span class="end">21 Jun, 11:02 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="added_to_wallet animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Added to Wallet <span class="end">$200.00</span></h2>
+                    <h3 class="d-flex">Bank of USA <span class="end">20 Jun, 11:00 am</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="added_to_wallet animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Reveice form Ride Taker <span class="end">$10.00</span></h2>
+                    <h3 class="d-flex">Emili Anderson<span class="end">13 Jun,02:32 pm</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Sent to Bank <span class="end">$50.00</span></h2>
+                    <h3 class="d-flex">Bank of USA <span class="end">01 Jun, 10:02 am</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Paid to Rider <span class="end">$18.00</span></h2>
+                    <h3 class="d-flex">Linda Hemiltone <span class="end">26 May, 11:02 am</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="added_to_wallet animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Added to Wallet <span class="end">$100.00</span></h2>
+                    <h3 class="d-flex">Emilil Anderson <span class="end">21 May, 11:02 am</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Paid to Rider <span class="end">$24.00</span></h2>
+                    <h3 class="d-flex">Emili Anderson <span class="end">21 Jun, 11:02 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="added_to_wallet animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Added to Wallet <span class="end">$200.00</span></h2>
+                    <h3 class="d-flex">Bank of USA <span class="end">20 Jun, 11:00 am</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="added_to_wallet animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Reveice form Ride Taker <span class="end">$10.00</span></h2>
+                    <h3 class="d-flex">Emili Anderson<span class="end">13 Jun,02:32 pm</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Sent to Bank <span class="end">$50.00</span></h2>
+                    <h3 class="d-flex">Bank of USA <span class="end">01 Jun, 10:02 am</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Paid to Rider <span class="end">$18.00</span></h2>
+                    <h3 class="d-flex">Linda Hemiltone <span class="end">26 May, 11:02 am</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="added_to_wallet animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Added to Wallet <span class="end">$100.00</span></h2>
+                    <h3 class="d-flex">Emilil Anderson <span class="end">21 May, 11:02 am</span></h3>
+                </div>
+            </ion-item>
+        </div>
+    </ion-list>
+</ion-content>

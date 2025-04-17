@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon=""></ion-back-button>
+        </ion-buttons>
+        <ion-title>Verify OTP</ion-title>
+    </ion-toolbar>
+
+    <div class="header_banner d-flex animate__animated animate__fadeInUp">
+        <div class="text_box">
+            <h2 class="animate__animated animate__fadeInU">{{'verification' | translate}}</h2>
+            <h3 class="animate__animated animate__fadeInU">{{'in_less_than_a_minute' | translate}}</h3>
+        </div>
+        <div class="banner_img end">
+            <img src="assets/images/verification.png">
+        </div>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <div class="logo">
+        <img src="assets/logo.png" class="logo_img" />
+    </div>
+
+    <div class="form animate__animated animate__fadeInUp">
+        <h2 class="ion-text-center animate__animated animate__fadeInU">{{'we_ve_sent_6_degit_verification_code' | translate}}.</h2>
+        <ion-list class="animate__animated animate__fadeInU" lines="none">
+            <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                <div class="item_inner">
+                    <ion-label style="margin-bottom:5px !important;">Enter OTP</ion-label>
+                    <ion-input
+                        mode="md"
+                        type="tel"
+                        placeholder="Enter 6-digit OTP"
+                        [(ngModel)]="otp"
+                        inputmode="numeric"
+                        maxlength="6"
+                        pattern="[0-9]*"
+                        min="0"
+                        minlength="6"
+                        autofocus
+                    ></ion-input>
+                    <p class="helper-text" *ngIf="otp && otp.length !== 6">
+                        Please enter all 6 digits
+                    </p>
+                </div>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <ion-button size="large" class="btn animate__animated animate__fadeInUp" expand="round" (click)="verifyOTP()">{{'get_started' | translate}}</ion-button>
+</ion-footer>

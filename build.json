@@ -1,0 +1,12 @@
+{
+    "android": {
+        "release": {
+            "keystore": "gopool_ionic.keystore",
+            "storePassword": "gopool_ionic",
+            "alias": "gopool_ionic",
+            "password": "gopool_ionic",
+            "keystoreType": "",
+            "packageType": "apk"
+        }
+    }
+}

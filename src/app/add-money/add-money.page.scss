@@ -1,0 +1,87 @@
+ion-header {
+    background: var(--bg-color) !important;
+    overflow: hidden;
+    .form {
+        padding: 8px 20px 39px 20px;
+        ion-item {
+            margin: 0 !important;
+        }
+    }
+}
+
+ion-content {
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    --background: var(--white);
+}
+
+ion-list {
+    margin: 0;
+    padding: 0;
+    background: var(--white);
+    border-radius: 20px 20px 0 0;
+    min-height: calc(100vh - 174.84px - 75px);
+    max-height: calc(100vh - 174.84px - 75px);
+    --animate-duration: .2s;
+    padding-top: 10px;
+    overflow: hidden;
+    overflow-y: auto;
+    .text_box {
+        width: 100%;
+        padding: 20px 20px 20px 20px;
+        h3 {
+            margin: 0;
+            color: var(--text-dark);
+            font-size: 0.93rem;
+            letter-spacing: 0.4px;
+            padding: 0;
+        }
+    }
+    ion-item {
+        padding: 13px 20px;
+        --inner-padding-end: 0px;
+        --inner-min-height: unset !important;
+        --padding-start: 0;
+        --background: var(--transparent) !important;
+        --min-height: unset;
+        --ripple-color: var(--transparent) !important;
+        margin: 0 auto;
+        margin-bottom: 0px;
+        background: var(--item-bg);
+        border-radius: 7px;
+        border-bottom: none !important;
+        .item_inner {
+            h2 {
+                margin: 0;
+                color: var(--text-dark);
+                font-size: 1.1rem;
+            }
+            .img_box {
+                background: var(--bg-color);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+                ion-icon {
+                    display: block;
+                    margin: auto;
+                    color: var(--primary);
+                    font-size: 1.4rem;
+                }
+            }
+            ion-radio {
+                --color-checked: var(--primary);
+                margin: 0;
+                margin-right: 15px;
+            }
+        }
+    }
+}
+
+ion-footer {
+    background: var(--white);
+    padding: 0 20px 20px 20px;
+    --animate-duration: .5s;
+}

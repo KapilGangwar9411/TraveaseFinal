@@ -1,0 +1,64 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon=""></ion-back-button>
+        </ion-buttons>
+        <ion-title></ion-title>
+    </ion-toolbar>
+
+    <div class="header_banner d-flex">
+        <div class="text_box">
+            <h2 class="d-flex">{{'manage_address' | translate}}</h2>
+            <h3>{{'pre_saved_address' | translate}}</h3>
+        </div>
+        <div class="banner_img end">
+            <img src="assets/images/address.png">
+        </div>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <ion-list lines="none">
+        <ion-item class="add_new_address" (click)="add_address()">
+            <div class="item_inner d-flex">
+                <ion-icon class="zmdi zmdi-plus"></ion-icon>
+                <div class="text_box">
+                    <h2 class="d-flex">{{'add_new_address' | translate}}</h2>
+                </div>
+            </div>
+        </ion-item>
+
+        <div class="item_list">
+            <ion-item class="animate__animated animate__fadeInUp" (click)="add_address()">
+                <div class="item_inner d-flex">
+                    <ion-icon class="zmdi zmdi-home"></ion-icon>
+                    <div class="text_box">
+                        <h2 class="d-flex">{{'home' | translate}}</h2>
+                        <h3>B121 - Galaxy Residency, Hemiltone Tower, <br>New York, UAS.</h3>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="add_address()">
+                <div class="item_inner d-flex">
+                    <ion-icon class="zmdi zmdi-city-alt"></ion-icon>
+                    <div class="text_box">
+                        <h2 class="d-flex">{{'office' | translate}}</h2>
+                        <h3> 104 Business House, Near City Bank, <br>New York, UAS.</h3>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="add_address()">
+                <div class="item_inner d-flex">
+                    <ion-icon class="zmdi zmdi-pin"></ion-icon>
+                    <div class="text_box">
+                        <h2 class="d-flex">{{'other' | translate}}</h2>
+                        <h3> 1141, Peter Farm House, Cith Gardern Villas <br>New York, UAS.</h3>
+                    </div>
+                </div>
+            </ion-item>
+        </div>
+
+    </ion-list>
+</ion-content>

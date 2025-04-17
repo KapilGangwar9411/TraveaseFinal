@@ -1,0 +1,658 @@
+<ion-header class="bg_transparent">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon=""></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            {{'poolers_on' | translate}} 25 Jun, 10:30 am
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+    <ion-list lines="none">
+        <ion-item class="animate__animated animate__fadeInUp" (click)="pool_info()">
+            <div class="img_content" slot="start">
+                <div class="img_box center_img">
+                    <img src="assets/images/profiles/10.png" class="crop_img">
+                </div>
+                <h6 class="d-flex">
+                    <ion-icon class="zmdi zmdi-star"></ion-icon>
+                    4.5
+                </h6>
+            </div>
+            <ion-label>
+                <h2 class="d-flex">
+                    <span class="name">George Anderson </span>
+                    <span class="end">$3.50</span>
+                </h2>
+                <h3 class="d-flex">
+                    <ion-icon class="zmdi zmdi-shield-check ion-text-start"></ion-icon>
+                    <span class="company_name">Bank of USA</span>
+                    <span class="seats_details end">
+                        <ion-icon class="zmdi zmdi-car ion-text-start"></ion-icon>
+                        <small></small>
+                        <span class="seats">
+                            <ion-icon class="zmdi zmdi-account-circle ion-text-center active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-account-circle ion-text-center"></ion-icon>
+                            <ion-icon class="zmdi zmdi-account-circle ion-text-center"></ion-icon>
+                            <ion-icon class="zmdi zmdi-account-circle ion-text-center"></ion-icon>
+                        </span>
+                    </span>
+                </h3>
+
+                <div class="location_info">
+
+                    <div class="dotts">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <h4 class="d-flex">
+                        <!-- <ion-icon class="zmdi zmdi-walk ion-text-start"></ion-icon>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-center"></ion-icon>
+                        <ion-icon class="zmdi zmdi-car ion-text-end"></ion-icon>
+                        <span class="distance">520m</span> -->
+                        <ion-icon class="zmdi zmdi-circle ion-text-center"></ion-icon>
+                        <strong class="d-flex">
+                            <span class="location_name">Hemiltone Bridge</span>
+                            <!-- <span class="end">9:58 am</span> -->
+                        </strong>
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <!-- <ion-icon class="zmdi zmdi-car ion-text-start"></ion-icon>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-center"></ion-icon>
+                        <ion-icon class="zmdi zmdi-walk ion-text-end"></ion-icon>
+                        <span class="distance">380m</span> -->
+                        <ion-icon class="zmdi zmdi-chevron-down ion-text-center"></ion-icon>
+                        <strong class="d-flex">
+                            <span class="location_name">World Trade Point</span>
+                            <!-- <span class="end">10:35 am</span> -->
+                        </strong>
+                    </h4>
+                </div>
+            </ion-label>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="pool_info()">
+            <div class="img_content" slot="start">
+                <div class="img_box center_img">
+                    <img src="assets/images/profiles/9.png" class="crop_img">
+                </div>
+                <h6 class="d-flex">
+                    <ion-icon class="zmdi zmdi-star"></ion-icon>
+                    4.8
+                </h6>
+            </div>
+            <ion-label>
+                <h2 class="d-flex">
+                    <span class="name">Emili Williamson </span>
+                    <span class="end">$2.80</span>
+                </h2>
+                <h3 class="d-flex">
+                    <ion-icon class="zmdi zmdi-shield-check ion-text-start"></ion-icon>
+                    <span class="company_name">Harvard law school</span>
+                    <span class="seats_details end">
+                        <ion-icon class="zmdi zmdi-car ion-text-start"></ion-icon>
+                        <small></small>
+                        <span class="seats">
+                            <ion-icon class="zmdi zmdi-account-circle ion-text-center active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-account-circle ion-text-center"></ion-icon>
+                            <ion-icon class="zmdi zmdi-account-circle ion-text-center"></ion-icon>
+                            <!-- <ion-icon class="zmdi zmdi-account-circle ion-text-center"></ion-icon> -->
+                        </span>
+                    </span>
+                </h3>
+
+                <div class="location_info">
+
+                    <div class="dotts">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <h4 class="d-flex">
+                        <!-- <ion-icon class="zmdi zmdi-walk ion-text-start"></ion-icon>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-center"></ion-icon>
+                        <ion-icon class="zmdi zmdi-car ion-text-end"></ion-icon>
+                        <span class="distance">720m</span> -->
+                        <ion-icon class="zmdi zmdi-circle ion-text-center"></ion-icon>
+                        <strong class="d-flex">
+                            <span class="location_name">City Parle Point</span>
+                            <!-- <span class="end">9:58 am</span> -->
+                        </strong>
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <!-- <ion-icon class="zmdi zmdi-car ion-text-start"></ion-icon>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-center"></ion-icon>
+                        <ion-icon class="zmdi zmdi-walk ion-text-end"></ion-icon>
+                        <span class="distance">380m</span> -->
+                        <ion-icon class="zmdi zmdi-chevron-down ion-text-center"></ion-icon>
+                        <strong class="d-flex">
+                            <span class="location_name">World Trade Point</span>
+                            <!-- <span class="end">10:35 am</span> -->
+                        </strong>
+                    </h4>
+                </div>
+            </ion-label>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="pool_info()">
+            <div class="img_content" slot="start">
+                <div class="img_box center_img">
+                    <img src="assets/images/profiles/8.png" class="crop_img">
+                </div>
+                <h6 class="d-flex">
+                    <ion-icon class="zmdi zmdi-star"></ion-icon>
+                    4.1
+                </h6>
+            </div>
+            <ion-label>
+                <h2 class="d-flex">
+                    <span class="name">Mark Taylor</span>
+                    <span class="end">$4.50</span>
+                </h2>
+                <h3 class="d-flex">
+                    <ion-icon class="zmdi zmdi-shield-check ion-text-start"></ion-icon>
+                    <span class="company_name">Creative Graphics</span>
+                    <span class="seats_details end">
+                        <span class="seats_details end">
+                            <ion-icon class="zmdi zmdi-car ion-text-start"></ion-icon>
+                            <small></small>
+                            <span class="seats">
+                                <ion-icon class="zmdi zmdi-account-circle ion-text-center active"></ion-icon>
+                                <ion-icon class="zmdi zmdi-account-circle ion-text-center"></ion-icon>
+                                <ion-icon class="zmdi zmdi-account-circle ion-text-center"></ion-icon>
+                            </span>
+                        </span>
+                    </span>
+                </h3>
+
+                <div class="location_info">
+
+                    <div class="dotts">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <h4 class="d-flex">
+                        <!-- <ion-icon class="zmdi zmdi-walk ion-text-start"></ion-icon>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-center"></ion-icon>
+                        <ion-icon class="zmdi zmdi-bike ion-text-end"></ion-icon>
+                        <span class="distance">520m</span> -->
+                        <ion-icon class="zmdi zmdi-circle ion-text-center"></ion-icon>
+                        <strong class="d-flex">
+                            <span class="location_name">Hemiltone Bridge</span>
+                            <!-- <span class="end">9:20 am</span> -->
+                        </strong>
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <!-- <ion-icon class="zmdi zmdi-bike ion-text-start"></ion-icon>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-center"></ion-icon>
+                        <ion-icon class="zmdi zmdi-walk ion-text-end"></ion-icon>
+                        <span class="distance">200m</span> -->
+                        <ion-icon class="zmdi zmdi-chevron-down ion-text-center"></ion-icon>
+                        <strong class="d-flex">
+                            <span class="location_name">Golden Yard Street</span>
+                            <!-- <span class="end">10:25 am</span> -->
+                        </strong>
+                    </h4>
+                </div>
+            </ion-label>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="pool_info()">
+            <div class="img_content" slot="start">
+                <div class="img_box center_img">
+                    <img src="assets/images/profiles/6.png" class="crop_img">
+                </div>
+                <h6 class="d-flex">
+                    <ion-icon class="zmdi zmdi-star"></ion-icon>
+                    3.9
+                </h6>
+            </div>
+            <ion-label>
+                <h2 class="d-flex">
+                    <span class="name">Lisa Davis </span>
+                    <span class="end">$3.80</span>
+                </h2>
+                <h3 class="d-flex">
+                    <ion-icon class="zmdi zmdi-shield-check ion-text-start"></ion-icon>
+                    <span class="company_name">INFC Corporation</span>
+                    <span class="seats_details end">
+                        <ion-icon class="zmdi zmdi-car ion-text-start"></ion-icon>
+                        <small></small>
+                        <span class="seats">
+                            <ion-icon class="zmdi zmdi-account-circle ion-text-center active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-account-circle ion-text-center active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-account-circle ion-text-center"></ion-icon>
+                            <!-- <ion-icon class="zmdi zmdi-account-circle ion-text-center"></ion-icon> -->
+                        </span>
+                    </span>
+                </h3>
+
+                <div class="location_info">
+
+                    <div class="dotts">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <h4 class="d-flex">
+                        <!-- <ion-icon class="zmdi zmdi-walk ion-text-start"></ion-icon>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-center"></ion-icon>
+                        <ion-icon class="zmdi zmdi-car ion-text-end"></ion-icon>
+                        <span class="distance">520m</span> -->
+                        <ion-icon class="zmdi zmdi-circle ion-text-center"></ion-icon>
+                        <strong class="d-flex">
+                            <span class="location_name">City Parle Point</span>
+                            <!-- <span class="end">9:10 am</span> -->
+                        </strong>
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <!-- <ion-icon class="zmdi zmdi-car ion-text-start"></ion-icon>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-center"></ion-icon>
+                        <ion-icon class="zmdi zmdi-walk ion-text-end"></ion-icon>
+                        <span class="distance">200m</span> -->
+                        <ion-icon class="zmdi zmdi-chevron-down ion-text-center"></ion-icon>
+                        <strong class="d-flex">
+                            <span class="location_name">Golden Yard Street</span>
+                            <!-- <span class="end">10:40 am</span> -->
+                        </strong>
+                    </h4>
+                </div>
+            </ion-label>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="pool_info()">
+            <div class="img_content" slot="start">
+                <div class="img_box center_img">
+                    <img src="assets/images/profiles/7.png" class="crop_img">
+                </div>
+                <h6 class="d-flex">
+                    <ion-icon class="zmdi zmdi-star"></ion-icon>
+                    4.1
+                </h6>
+            </div>
+            <ion-label>
+                <h2 class="d-flex">
+                    <span class="name">Deniel Haydon</span>
+                    <span class="end">$2.90</span>
+                </h2>
+                <h3 class="d-flex">
+                    <ion-icon class="zmdi zmdi-shield-check ion-text-start"></ion-icon>
+                    <span class="company_name">TLPS Accounts</span>
+                    <span class="seats_details end">
+                        <span class="seats_details end">
+                            <ion-icon class="zmdi zmdi-car ion-text-start"></ion-icon>
+                            <small></small>
+                            <span class="seats">
+                                <ion-icon class="zmdi zmdi-account-circle ion-text-center active"></ion-icon>
+                                <ion-icon class="zmdi zmdi-account-circle ion-text-center active"></ion-icon>
+                                <ion-icon class="zmdi zmdi-account-circle ion-text-center"></ion-icon>
+                            </span>
+                        </span>
+                    </span>
+                </h3>
+
+                <div class="location_info">
+                    <div class="dotts">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <h4 class="d-flex">
+                        <!-- <ion-icon class="zmdi zmdi-walk ion-text-start"></ion-icon>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-center"></ion-icon>
+                        <ion-icon class="zmdi zmdi-bike ion-text-end"></ion-icon>
+                        <span class="distance">110m</span> -->
+                        <ion-icon class="zmdi zmdi-circle ion-text-center"></ion-icon>
+                        <strong class="d-flex">
+                            <span class="location_name">Rotery Club of City</span>
+                            <!-- <span class="end">9:00 am</span> -->
+                        </strong>
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <!-- <ion-icon class="zmdi zmdi-bike ion-text-start"></ion-icon>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-center"></ion-icon>
+                        <ion-icon class="zmdi zmdi-walk ion-text-end"></ion-icon>
+                        <span class="distance">160m</span> -->
+                        <ion-icon class="zmdi zmdi-chevron-down ion-text-center"></ion-icon>
+                        <strong class="d-flex">
+                            <span class="location_name">Opera Garden</span>
+                            <!-- <span class="end">10:05 am</span> -->
+                        </strong>
+                    </h4>
+                </div>
+            </ion-label>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="pool_info()">
+            <div class="img_content" slot="start">
+                <div class="img_box center_img">
+                    <img src="assets/images/profiles/10.png" class="crop_img">
+                </div>
+                <h6 class="d-flex">
+                    <ion-icon class="zmdi zmdi-star"></ion-icon>
+                    4.5
+                </h6>
+            </div>
+            <ion-label>
+                <h2 class="d-flex">
+                    <span class="name">George Anderson </span>
+                    <span class="end">$3.50</span>
+                </h2>
+                <h3 class="d-flex">
+                    <ion-icon class="zmdi zmdi-shield-check ion-text-start"></ion-icon>
+                    <span class="company_name">Bank of USA</span>
+                    <span class="seats_details end">
+                        <ion-icon class="zmdi zmdi-car ion-text-start"></ion-icon>
+                        <small></small>
+                        <span class="seats">
+                            <ion-icon class="zmdi zmdi-account-circle ion-text-center active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-account-circle ion-text-center"></ion-icon>
+                            <ion-icon class="zmdi zmdi-account-circle ion-text-center"></ion-icon>
+                            <ion-icon class="zmdi zmdi-account-circle ion-text-center"></ion-icon>
+                        </span>
+                    </span>
+                </h3>
+
+                <div class="location_info">
+
+                    <div class="dotts">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <h4 class="d-flex">
+                        <!-- <ion-icon class="zmdi zmdi-walk ion-text-start"></ion-icon>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-center"></ion-icon>
+                        <ion-icon class="zmdi zmdi-car ion-text-end"></ion-icon>
+                        <span class="distance">520m</span> -->
+                        <ion-icon class="zmdi zmdi-circle ion-text-center"></ion-icon>
+                        <strong class="d-flex">
+                            <span class="location_name">Hemiltone Bridge</span>
+                            <!-- <span class="end">9:58 am</span> -->
+                        </strong>
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <!-- <ion-icon class="zmdi zmdi-car ion-text-start"></ion-icon>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-center"></ion-icon>
+                        <ion-icon class="zmdi zmdi-walk ion-text-end"></ion-icon>
+                        <span class="distance">380m</span> -->
+                        <ion-icon class="zmdi zmdi-chevron-down ion-text-center"></ion-icon>
+                        <strong class="d-flex">
+                            <span class="location_name">World Trade Point</span>
+                            <!-- <span class="end">10:35 am</span> -->
+                        </strong>
+                    </h4>
+                </div>
+            </ion-label>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="pool_info()">
+            <div class="img_content" slot="start">
+                <div class="img_box center_img">
+                    <img src="assets/images/profiles/9.png" class="crop_img">
+                </div>
+                <h6 class="d-flex">
+                    <ion-icon class="zmdi zmdi-star"></ion-icon>
+                    4.8
+                </h6>
+            </div>
+            <ion-label>
+                <h2 class="d-flex">
+                    <span class="name">Emili Williamson </span>
+                    <span class="end">$2.80</span>
+                </h2>
+                <h3 class="d-flex">
+                    <ion-icon class="zmdi zmdi-shield-check ion-text-start"></ion-icon>
+                    <span class="company_name">Harvard law school</span>
+                    <span class="seats_details end">
+                        <ion-icon class="zmdi zmdi-car ion-text-start"></ion-icon>
+                        <small></small>
+                        <span class="seats">
+                            <ion-icon class="zmdi zmdi-account-circle ion-text-center active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-account-circle ion-text-center"></ion-icon>
+                            <ion-icon class="zmdi zmdi-account-circle ion-text-center"></ion-icon>
+                            <!-- <ion-icon class="zmdi zmdi-account-circle ion-text-center"></ion-icon> -->
+                        </span>
+                    </span>
+                </h3>
+
+                <div class="location_info">
+
+                    <div class="dotts">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <h4 class="d-flex">
+                        <!-- <ion-icon class="zmdi zmdi-walk ion-text-start"></ion-icon>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-center"></ion-icon>
+                        <ion-icon class="zmdi zmdi-car ion-text-end"></ion-icon>
+                        <span class="distance">720m</span> -->
+                        <ion-icon class="zmdi zmdi-circle ion-text-center"></ion-icon>
+                        <strong class="d-flex">
+                            <span class="location_name">City Parle Point</span>
+                            <!-- <span class="end">9:58 am</span> -->
+                        </strong>
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <!-- <ion-icon class="zmdi zmdi-car ion-text-start"></ion-icon>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-center"></ion-icon>
+                        <ion-icon class="zmdi zmdi-walk ion-text-end"></ion-icon>
+                        <span class="distance">380m</span> -->
+                        <ion-icon class="zmdi zmdi-chevron-down ion-text-center"></ion-icon>
+                        <strong class="d-flex">
+                            <span class="location_name">World Trade Point</span>
+                            <!-- <span class="end">10:35 am</span> -->
+                        </strong>
+                    </h4>
+                </div>
+            </ion-label>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="pool_info()">
+            <div class="img_content" slot="start">
+                <div class="img_box center_img">
+                    <img src="assets/images/profiles/8.png" class="crop_img">
+                </div>
+                <h6 class="d-flex">
+                    <ion-icon class="zmdi zmdi-star"></ion-icon>
+                    4.1
+                </h6>
+            </div>
+            <ion-label>
+                <h2 class="d-flex">
+                    <span class="name">Mark Taylor</span>
+                    <span class="end">$4.50</span>
+                </h2>
+                <h3 class="d-flex">
+                    <ion-icon class="zmdi zmdi-shield-check ion-text-start"></ion-icon>
+                    <span class="company_name">Creative Graphics</span>
+                    <span class="seats_details end">
+                        <span class="seats_details end">
+                            <ion-icon class="zmdi zmdi-car ion-text-start"></ion-icon>
+                            <small></small>
+                            <span class="seats">
+                                <ion-icon class="zmdi zmdi-account-circle ion-text-center active"></ion-icon>
+                                <ion-icon class="zmdi zmdi-account-circle ion-text-center"></ion-icon>
+                                <ion-icon class="zmdi zmdi-account-circle ion-text-center"></ion-icon>
+                            </span>
+                        </span>
+                    </span>
+                </h3>
+
+                <div class="location_info">
+
+                    <div class="dotts">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <h4 class="d-flex">
+                        <!-- <ion-icon class="zmdi zmdi-walk ion-text-start"></ion-icon>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-center"></ion-icon>
+                        <ion-icon class="zmdi zmdi-bike ion-text-end"></ion-icon>
+                        <span class="distance">520m</span> -->
+                        <ion-icon class="zmdi zmdi-circle ion-text-center"></ion-icon>
+                        <strong class="d-flex">
+                            <span class="location_name">Hemiltone Bridge</span>
+                            <!-- <span class="end">9:20 am</span> -->
+                        </strong>
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <!-- <ion-icon class="zmdi zmdi-bike ion-text-start"></ion-icon>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-center"></ion-icon>
+                        <ion-icon class="zmdi zmdi-walk ion-text-end"></ion-icon>
+                        <span class="distance">200m</span> -->
+                        <ion-icon class="zmdi zmdi-chevron-down ion-text-center"></ion-icon>
+                        <strong class="d-flex">
+                            <span class="location_name">Golden Yard Street</span>
+                            <!-- <span class="end">10:25 am</span> -->
+                        </strong>
+                    </h4>
+                </div>
+            </ion-label>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="pool_info()">
+            <div class="img_content" slot="start">
+                <div class="img_box center_img">
+                    <img src="assets/images/profiles/6.png" class="crop_img">
+                </div>
+                <h6 class="d-flex">
+                    <ion-icon class="zmdi zmdi-star"></ion-icon>
+                    3.9
+                </h6>
+            </div>
+            <ion-label>
+                <h2 class="d-flex">
+                    <span class="name">Lisa Davis </span>
+                    <span class="end">$3.80</span>
+                </h2>
+                <h3 class="d-flex">
+                    <ion-icon class="zmdi zmdi-shield-check ion-text-start"></ion-icon>
+                    <span class="company_name">INFC Corporation</span>
+                    <span class="seats_details end">
+                        <ion-icon class="zmdi zmdi-car ion-text-start"></ion-icon>
+                        <small></small>
+                        <span class="seats">
+                            <ion-icon class="zmdi zmdi-account-circle ion-text-center active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-account-circle ion-text-center active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-account-circle ion-text-center"></ion-icon>
+                            <!-- <ion-icon class="zmdi zmdi-account-circle ion-text-center"></ion-icon> -->
+                        </span>
+                    </span>
+                </h3>
+
+                <div class="location_info">
+
+                    <div class="dotts">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <h4 class="d-flex">
+                        <!-- <ion-icon class="zmdi zmdi-walk ion-text-start"></ion-icon>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-center"></ion-icon>
+                        <ion-icon class="zmdi zmdi-car ion-text-end"></ion-icon>
+                        <span class="distance">520m</span> -->
+                        <ion-icon class="zmdi zmdi-circle ion-text-center"></ion-icon>
+                        <strong class="d-flex">
+                            <span class="location_name">City Parle Point</span>
+                            <!-- <span class="end">9:10 am</span> -->
+                        </strong>
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <!-- <ion-icon class="zmdi zmdi-car ion-text-start"></ion-icon>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-center"></ion-icon>
+                        <ion-icon class="zmdi zmdi-walk ion-text-end"></ion-icon>
+                        <span class="distance">200m</span> -->
+                        <ion-icon class="zmdi zmdi-chevron-down ion-text-center"></ion-icon>
+                        <strong class="d-flex">
+                            <span class="location_name">Golden Yard Street</span>
+                            <!-- <span class="end">10:40 am</span> -->
+                        </strong>
+                    </h4>
+                </div>
+            </ion-label>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="pool_info()">
+            <div class="img_content" slot="start">
+                <div class="img_box center_img">
+                    <img src="assets/images/profiles/7.png" class="crop_img">
+                </div>
+                <h6 class="d-flex">
+                    <ion-icon class="zmdi zmdi-star"></ion-icon>
+                    4.1
+                </h6>
+            </div>
+            <ion-label>
+                <h2 class="d-flex">
+                    <span class="name">Deniel Haydon</span>
+                    <span class="end">$2.90</span>
+                </h2>
+                <h3 class="d-flex">
+                    <ion-icon class="zmdi zmdi-shield-check ion-text-start"></ion-icon>
+                    <span class="company_name">TLPS Accounts</span>
+                    <span class="seats_details end">
+                        <span class="seats_details end">
+                            <ion-icon class="zmdi zmdi-car ion-text-start"></ion-icon>
+                            <small></small>
+                            <span class="seats">
+                                <ion-icon class="zmdi zmdi-account-circle ion-text-center active"></ion-icon>
+                                <ion-icon class="zmdi zmdi-account-circle ion-text-center active"></ion-icon>
+                                <ion-icon class="zmdi zmdi-account-circle ion-text-center"></ion-icon>
+                            </span>
+                        </span>
+                    </span>
+                </h3>
+
+                <div class="location_info">
+                    <div class="dotts">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <h4 class="d-flex">
+                        <!-- <ion-icon class="zmdi zmdi-walk ion-text-start"></ion-icon>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-center"></ion-icon>
+                        <ion-icon class="zmdi zmdi-bike ion-text-end"></ion-icon>
+                        <span class="distance">110m</span> -->
+                        <ion-icon class="zmdi zmdi-circle ion-text-center"></ion-icon>
+                        <strong class="d-flex">
+                            <span class="location_name">Rotery Club of City</span>
+                            <!-- <span class="end">9:00 am</span> -->
+                        </strong>
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <!-- <ion-icon class="zmdi zmdi-bike ion-text-start"></ion-icon>
+                        <ion-icon class="zmdi zmdi-chevron-right ion-text-center"></ion-icon>
+                        <ion-icon class="zmdi zmdi-walk ion-text-end"></ion-icon>
+                        <span class="distance">160m</span> -->
+                        <ion-icon class="zmdi zmdi-chevron-down ion-text-center"></ion-icon>
+                        <strong class="d-flex">
+                            <span class="location_name">Opera Garden</span>
+                            <!-- <span class="end">10:05 am</span> -->
+                        </strong>
+                    </h4>
+                </div>
+            </ion-label>
+        </ion-item>
+
+
+    </ion-list>
+</ion-content>

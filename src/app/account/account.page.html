@@ -1,0 +1,136 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon=""></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            <div class="title-inner d-flex">
+                {{'account' | translate}}
+
+                <ion-button *ngIf="config.demoMode" size="large" class="btn end" expand="round" (click)="buyappalert()">
+                    {{"buy_this_app" | translate}}
+                </ion-button>
+            </div>
+        </ion-title>
+
+    </ion-toolbar>
+
+    <div class="header_banner d-flex">
+
+        <div class="text_box" (click)="my_profile()">
+            <h2>Samantha Simth</h2>
+            <h3 class="d-flex">
+                <ion-icon class="zmdi zmdi-shield-check"></ion-icon>
+                Opus Labworks
+            </h3>
+        </div>
+        <div class="img_box center_img end" (click)="my_profile()">
+            <img src="assets/images/profiles/user_profile.png" class="crop_img">
+        </div>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <ion-list lines="none">
+        <ion-item class="wallet" (click)="wallet()">
+            <div class="item_inner d-flex">
+                <ion-icon class="zmdi zmdi-balance-wallet"></ion-icon>
+                <div class="text_box">
+                    <h2 class="d-flex">{{'wallet' | translate}}
+                        <span class="end">
+                          $159.50
+<!--                            <ion-icon class="zmdi zmdi-chevron-right ion-text-end"></ion-icon>-->
+                          
+                          <ion-icon name="chevron-forward-outline" class="ion-text-end"></ion-icon>
+                      </span>
+                    </h2>
+
+                    <h3>{{'quick_payments' | translate}}</h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <div class="item_list">
+<!-- 
+            <ion-item class="animate__animated animate__fadeInUp" (click)="my_vehicles()">
+                <div class="item_inner d-flex">
+                    <ion-icon class="zmdi zmdi-car"></ion-icon>
+                    <div class="text_box">
+                        <h2 class="d-flex">{{'my_vehicle' | translate}}</h2>
+                        <h3>{{'add_vehicle_information' | translate}}</h3>
+                    </div>
+                </div>
+            </ion-item> -->
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="manage_address()">
+                <div class="item_inner d-flex">
+                    <ion-icon class="zmdi zmdi-pin"></ion-icon>
+                    <div class="text_box">
+                        <h2 class="d-flex">{{'manage_address' | translate}}</h2>
+                        <h3>{{'pre_saved_address' | translate}}</h3>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="support()">
+                <div class="item_inner d-flex">
+                    <ion-icon class="zmdi zmdi-email"></ion-icon>
+                    <div class="text_box">
+                        <h2 class="d-flex">{{'support' | translate}}</h2>
+                        <h3>{{'connect_us_for_issue_feedback' | translate}}</h3>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="privacy_policy()">
+                <div class="item_inner d-flex">
+                    <ion-icon class="zmdi zmdi-assignment"></ion-icon>
+                    <div class="text_box">
+                        <h2 class="d-flex">{{'privacy_policy' | translate}}</h2>
+                        <h3>{{'know_our_privacy_policies' | translate}}</h3>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="change_language()">
+                <div class="item_inner d-flex">
+                    <ion-icon class="zmdi zmdi-globe"></ion-icon>
+                    <div class="text_box">
+                        <h2 class="d-flex">{{'change_language' | translate}}</h2>
+                        <h3>{{'set_your_preferred_language' | translate}}</h3>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="faqs()">
+                <div class="item_inner d-flex">
+                    <ion-icon class="zmdi zmdi-pin-help"></ion-icon>
+                    <div class="text_box">
+                        <h2 class="d-flex">{{'faqs' | translate}}</h2>
+                        <h3>{{'get_you_qustion_answered' | translate}}</h3>
+                    </div>
+                </div>
+            </ion-item>
+
+            
+            <ion-item class="animate__animated animate__fadeInUp" (click)="logout()">
+                <div class="item_inner d-flex">
+                    <ion-icon class="zmdi zmdi-power"></ion-icon>
+                    <div class="text_box">
+                        <h2 class="d-flex">{{'logout' | translate}}</h2>
+                        <h3>{{'click_to_bid_farewell_logout_here' | translate}}</h3>
+                    </div>
+                </div>
+            </ion-item>
+
+
+            <div class="developed_by d-flex animate__animated animate__fadeInUp" (click)="developed_by()" *ngIf="config.demoMode">
+                <h2>{{"developed_by" | translate}}</h2>
+                <div class="img_box end">
+                    <img src="assets/images/opus.png">
+                </div>
+            </div>
+        </div>
+
+    </ion-list>
+</ion-content>

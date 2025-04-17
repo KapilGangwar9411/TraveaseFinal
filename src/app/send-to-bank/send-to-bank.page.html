@@ -1,0 +1,71 @@
+<ion-header class="bg_transparent">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon=""></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{'send_to_bank' | translate}}</ion-title>
+    </ion-toolbar>
+    <div class="header_banner d-flex">
+        <div class="text_box">
+            <h2 class="d-flex">$159.50 </h2>
+            <h3>{{'available_balance' | translate}}</h3>
+        </div>
+        <div class="banner_img end">
+            <img src="assets/images/verification.png">
+        </div>
+    </div>
+</ion-header>
+
+
+<ion-content class="bg_color">
+    <div class="form">
+        <ion-list lines="none">
+            <ion-card>
+                <h2>{{'bank_info' | translate}}</h2>
+
+                <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                    <div class="item_inner">
+                        <ion-label mode="md">{{"account_holder_name" | translate}}</ion-label>
+                        <ion-input mode="md" type="name" placeholder="{{'enter_account_holder_name' | translate}}"></ion-input>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                    <div class="item_inner">
+                        <ion-label mode="md">{{"bank_name" | translate}}</ion-label>
+                        <ion-input mode="md" type="name" placeholder="{{'enter_bank_name' | translate}}"></ion-input>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                    <div class="item_inner">
+                        <ion-label mode="md">{{"branch_code" | translate}}</ion-label>
+                        <ion-input mode="md" type="name" placeholder="{{'enter_branch_code' | translate}}"></ion-input>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                    <div class="item_inner">
+                        <ion-label mode="md">{{"account_number" | translate}}</ion-label>
+                        <ion-input mode="md" type="name" placeholder="{{'enter_account_number' | translate}}"></ion-input>
+                    </div>
+                </ion-item>
+            </ion-card>
+
+            <ion-card class="animate__animated animate__fadeInUp">
+                <ion-item lines="none">
+                    <div class="item_inner">
+                        <ion-label mode="md">{{"amount_to_transfer" | translate}}</ion-label>
+                        <ion-input mode="md" type="number" placeholder="{{'enter_amount_to_transfer' | translate}}"></ion-input>
+                    </div>
+                </ion-item>
+            </ion-card>
+        </ion-list>
+    </div>
+</ion-content>
+
+
+<ion-footer class="ion-no-border">
+    <ion-button size="large" class="btn animate__animated animate__fadeInUp" expand="round">{{'send_to_bank' | translate}}</ion-button>
+</ion-footer>

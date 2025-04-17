@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-toolbar>
+
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" defaultHref="sign-in" icon=""></ion-back-button>
+        </ion-buttons>
+
+        <ion-title></ion-title>
+    </ion-toolbar>
+
+    <div class="header_banner d-flex animate__animated animate__fadeInUp">
+        <div class="text_box">
+            <h2 class="d-flex">{{'language' | translate}}</h2>
+            <h3>{{'preferred_langauage' | translate}}</h3>
+        </div>
+        <div class="banner_img end">
+            <img src="assets/images/language.png">
+        </div>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <ion-list lines="none" class="animate__animated animate__fadeInUp">
+        <div class="text_box">
+            <h3>{{'select_preferred_langauage' | translate}}</h3>
+        </div>
+        <!-- <ion-radio-group [(ngModel)]="defaultLanguageCode">
+            <ion-item class="animate__animated animate__fadeInUp" *ngFor="let language of languages"
+                (click)="onLanguageClick(language)">
+                <div class="item_inner d-flex">
+                    <ion-radio value="{{language.code}}"></ion-radio>
+                    <h3>{{language.name}}</h3>
+                </div>
+            </ion-item>
+        </ion-radio-group> -->
+
+        <ion-radio-group [(ngModel)]="defaultLanguageCode">
+            <ion-radio class="animate__animated animate__fadeInUp" justify="space-between" alignment="start"
+                label-placement="fixed" value="{{language.code}}" *ngFor="let language of languages"
+                (click)="onLanguageClick(language)">
+                <h3 class="d-flex">
+                    {{language.name}}
+                </h3>
+            </ion-radio>
+        </ion-radio-group>
+    </ion-list>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <ion-button size="large" class="btn animate__animated animate__fadeInUp" expand="round"
+        (click)="languageConfirm()">{{'submit' | translate}}</ion-button>
+</ion-footer>
