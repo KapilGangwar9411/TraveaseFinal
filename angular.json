@@ -1,7 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "defaultProject": "app",
   "newProjectRoot": "projects",
   "projects": {
     "app": {
@@ -44,13 +43,9 @@
             "sourceMap": true,
             "optimization": false,
             "namedChunks": true,
-            "compilerOptions": {
-              "fullTemplateTypeCheck": true,
-              "strictInjectionParameters": true,
-              "enableIvy": true,
-              "strictTemplates": true,
-              "allowSyntheticDefaultImports": true
-            }
+            "allowedCommonJsDependencies": [
+              "mapbox-gl"
+            ]
           },
           "configurations": {
             "production": {
@@ -182,7 +177,6 @@
     }
   },
   "cli": {
-    "defaultCollection": "@ionic/angular-toolkit",
     "schematicCollections": [
       "@ionic/angular-toolkit"
     ],
