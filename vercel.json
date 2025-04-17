@@ -1,22 +1,14 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "installCommand": "npm install --legacy-peer-deps --force",
-        "buildCommand": "npm run build"
-      }
-    }
-  ],
+  "buildCommand": "chmod +x build.sh && ./build.sh",
+  "outputDirectory": "www",
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
+    { "handle": "filesystem" },
+    { "src": "/assets/(.*)", "dest": "/assets/$1" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ],
   "env": {
-    "NPM_FLAGS": "--legacy-peer-deps --force"
+    "NPM_FLAGS": "--legacy-peer-deps --force",
+    "NODE_OPTIONS": "--max_old_space_size=4096"
   }
 }

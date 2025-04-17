@@ -6,11 +6,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --configuration production",
+    "build": "ng build",
+    "vercel-build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint",
-    "vercel-build": "npm run build"
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
