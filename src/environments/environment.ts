@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:3000', // Your backend API URL
-  useMockData: true, // Toggle to use mock data when backend is not available
+  apiUrl: 'https://traveasebackendfinal-production.up.railway.app', // Deployed backend API URL
+  useMockData: false, // Toggle to use mock data when backend is not available
   twilio: {
     accountSid: 'YOUR_TWILIO_ACCOUNT_SID',
     authToken: 'YOUR_TWILIO_AUTH_TOKEN',
