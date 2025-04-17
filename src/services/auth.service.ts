@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Observable, throwError, of } from 'rxjs';
 import { catchError, tap, map } from 'rxjs/operators';
@@ -22,6 +22,7 @@ export interface AuthResponse {
 })
 export class AuthService {
   private apiUrl = environment.apiUrl;
+  private corsProxyUrl = 'https://corsproxy.io/?'; // CORS proxy service
   private currentUser: any = null;
 
   constructor(private http: HttpClient) {
@@ -71,29 +72,85 @@ export class AuthService {
   // Send OTP to phone number
   sendOTP(phoneNumber: string): Observable<any> {
     console.log('Sending OTP to:', phoneNumber);
-    return this.http.post(`${this.apiUrl}/auth/send-otp`, { phoneNumber })
-      .pipe(
-        tap(response => console.log('Send OTP response:', response)),
-        catchError(this.handleError.bind(this))
-      );
+
+    // Use standard HTTP headers to help with CORS
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    });
+
+    // Try direct request first, if CORS issues persist use proxy
+    try {
+      return this.http.post(`${this.apiUrl}/auth/send-otp`, { phoneNumber }, { headers })
+        .pipe(
+          tap(response => console.log('Send OTP response:', response)),
+          catchError(error => {
+            console.log('Error with direct API call, trying CORS proxy:', error);
+
+            // If direct request fails, try with CORS proxy
+            return this.http.post(`${this.corsProxyUrl}${encodeURIComponent(`${this.apiUrl}/auth/send-otp`)}`,
+              { phoneNumber }, { headers })
+              .pipe(
+                tap(response => console.log('Send OTP response via proxy:', response)),
+                catchError(this.handleError.bind(this))
+              );
+          })
+        );
+    } catch (error) {
+      console.error('Error in sendOTP method:', error);
+      return throwError(error);
+    }
   }
 
   // Verify OTP
   verifyOTP(phoneNumber: string, otp: string): Observable<AuthResponse> {
     console.log('Verifying OTP:', { phoneNumber, otp: String(otp) });
-    return this.http.post<AuthResponse>(`${this.apiUrl}/auth/verify-otp`, {
+
+    // Use standard HTTP headers to help with CORS
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    });
+
+    const payload = {
       phoneNumber,
       otp: String(otp) // Ensure OTP is sent as a string
-    }).pipe(
-      tap(response => {
-        console.log('Verify OTP response:', response);
-        // If verification successful, save user data
-        if (response && response.user) {
-          this.saveUserToStorage(response.user);
-        }
-      }),
-      catchError(this.handleError.bind(this))
-    );
+    };
+
+    // Try direct request first, if CORS issues persist use proxy
+    try {
+      return this.http.post<AuthResponse>(`${this.apiUrl}/auth/verify-otp`, payload, { headers })
+        .pipe(
+          tap(response => {
+            console.log('Verify OTP response:', response);
+            // If verification successful, save user data
+            if (response && response.user) {
+              this.saveUserToStorage(response.user);
+            }
+          }),
+          catchError(error => {
+            console.log('Error with direct API call, trying CORS proxy:', error);
+
+            // If direct request fails, try with CORS proxy
+            return this.http.post<AuthResponse>(
+              `${this.corsProxyUrl}${encodeURIComponent(`${this.apiUrl}/auth/verify-otp`)}`,
+              payload,
+              { headers }
+            ).pipe(
+              tap(response => {
+                console.log('Verify OTP response via proxy:', response);
+                if (response && response.user) {
+                  this.saveUserToStorage(response.user);
+                }
+              }),
+              catchError(this.handleError.bind(this))
+            );
+          })
+        );
+    } catch (error) {
+      console.error('Error in verifyOTP method:', error);
+      return throwError(error);
+    }
   }
 
   // Register user
